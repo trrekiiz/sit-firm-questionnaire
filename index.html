@@ -147,6 +147,13 @@
         font-size: 1.5em;
       }
     }
+    .ui.basic.table{
+      text-align: center;
+      font-size: 18px;
+    }
+    .ui.basic.table .content {
+      text-align: left;
+    }
 
 
   </style>
@@ -201,8 +208,65 @@
     <div class="ui vertical stripe segment" id="questionnaire">
       <div class="ui container">
           <form class="ui form">
+            <p>ข้อมูลทั่วไปเกี่ยวกับบริษัท</p>
+            <div class="one fields">
+              <div class="sixteen wide field">
+                <label>บริษัท</label>
+                <input placeholder="ชื่อบริษัท" name="company" type="text">
+              </div>
+            </div>
+            <div class="five fields">
+              <div class="three wide field">
+                <label>เลขที่ตั้ง</label>
+                <input placeholder="เลขที่ตั้ง" name="" type="text">
+              </div>
+              <div class="two wide field">
+                <label>หมู่ที่</label>
+                <input placeholder="หมู่ที่" name="" type="text">
+              </div>
+              <div class="five wide field">
+                <label>อาคาร</label>
+                <input placeholder="อาคาร" name="" type="text">
+              </div>
+              <div class="two wide field">
+                <label>ชั้นที่</label>
+                <input placeholder="ชั้นที่" name="" type="text">
+              </div>
+              <div class="four wide field">
+                <label>ถนน</label>
+                <input placeholder="ถนน" name="" type="text">
+              </div>
+            </div>
+            <div class="four fields">
+              <div class="four wide field">
+                <label>แขวง</label>
+                <input placeholder="แขวง" name="" type="text">
+              </div>
+              <div class="four wide field">
+                <label>เขต</label>
+                <input placeholder="เขต" name="" type="text">
+              </div>
+              <div class="four wide field">
+                <label>จังหวัด</label>
+                <input placeholder="จังหวัด" name="" type="text">
+              </div>
+              <div class="four wide field">
+                <label>รหัสไปรษณีย์</label>
+                <input placeholder="รหัสไปรษณีย์" name="" type="text">
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="eight wide field">
+                <label>เบอร์โทรศัพท์</label>
+                <input placeholder="เบอร์โทรศัพท์" name="" type="text">
+              </div>
+              <div class="eight wide field">
+                <label>E-mail</label>
+                <input placeholder="" name="" type="email">
+              </div>
+            </div>
             <div class="ui horizontal divider">ต่อ</div>
-            <p>ข้อมูลทั่วไปเกี่ยวบริษัทของผู้กรอก</p>
+            <p>ข้อมูลทั่วไปเกี่ยวกับผู้กรอก</p>
             <div class="three fields">
               <div class="four wide field">
                 <label>คำนำหน้าชื่อ</label>
@@ -625,8 +689,180 @@
             </div>
             <div class="ui horizontal divider">ต่อ</div>
             <p>แสดงความคิดเห็นต่อผลการดำเนินการการเรียนการสอนระดับปริญญาตรี <br /></be>(รายละเอียดหลักสูตรตามเอกสาร <a href="">คลิกที่นี่</a> เพื่อดาวน์โหลดเอกสาร)</p>
-
-            <div class="ui primary submit button">Submit</div>
+            <table class="ui basic table">
+            	<tbody>
+            		<tr>
+            			<td rowspan="3">
+                      การประเมินจากผู้มีส่วนเกี่ยวข้อง
+                  </td>
+            			<td colspan="6">
+                      ปริญญาตรี
+                  </td>
+            		</tr>
+            		<tr>
+            			<td colspan="3">
+                      หลักสูตรเทคโนโลยีสารสนเทศ
+                  </td>
+            			<td colspan="3">
+                      หลักสูตรวิทยาการคอมพิวเตอร์
+                  </td>
+            		</tr>
+            		<tr>
+            			<td>ควรปรับปรุง</td>
+            			<td>ดี</td>
+            			<td>ดีมาก</td>
+            			<td>ควรปรับปรุง</td>
+            			<td>ดี</td>
+            			<td>ดีมาก</td>
+            		</tr>
+            		<tr>
+            			<td class="content">เนื้อหาของหลักสูตรจัดได้อย่างเหมาะสม รายวิชาบังคับของหลักสูตรที่ต้องปูพื้นฐานด้านเทคโนโลยีสารสนเทศและสร้างความเชื่อมโยงระหว่างภาคทฤษฎีและปฏิบัติ มีปฏิบัติการ แบบฝึกหัด โครงงาน และกรณีศึกษาให้นักศึกษาเข้าใจการประยุกต์องค์ความรู้กับปัญหาจริง </td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            		</tr>
+            		<tr>
+            			<td class="content">นักศึกษามีคุณธรรม จริยธรรม ถ่อมตนและทำหน้าที่เป็นพลเมืองดี รับผิดชอบต่อตนเอง</td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            		</tr>
+            		<tr>
+            			<td class="content">นักศึกษามีความรู้พื้นฐานด้านเทคโนโลยีสารสนเทศทั้งภาคทฤษฎีและภาคปฎิบัติอยู่ในเกณฑ์ดี สามารถประยุกต์ได้อย่างเหมาะสมในการประกอบวิชาชีพ </td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            		</tr>
+            		<tr>
+            			<td class="content">นักศึกษามีความรู้ทันสมัย ใฝ่รู้ และมีความสามารถพัฒนาความรู้ เพื่อพัฒนาตนเองในด้านเฉพาะที่สนใจ </td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            		</tr>
+            		<tr>
+            			<td class="content">นักศึกษาคิดเป็น ทำเป็น และเลือกวิธีการแก้ปัญหาได้อย่างเป็นระบบและเหมาะสม</td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            		</tr>
+            		<tr>
+            			<td class="content">นักศึกษามีความสามารถทำงานร่วมกับผู้อื่น มีทักษะการบริหารจัดการและทำงานเป็นหมู่คณะ</td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            		</tr>
+            		<tr>
+            			<td class="content">นักศึกษารู้จักแสวงหาความรู้ด้วยตนเองและสามารถติดต่อสื่อสารกับผู้อื่นได้เป็นอย่างดี</td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            		</tr>
+            		<tr>
+            			<td class="content">นักศึกษามีความสามารถในการใช้ภาษาไทยและภาษาต่างประเทศในการสื่อสารและใช้เทคโนโลยีได้ดี</td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            		</tr>
+            		<tr>
+            			<td class="content">นักศึกษามีความสามารถวิเคราะห์ ออกแบบ พัฒนา ติดตั้ง และปรับปรุงระบบคอมพิวเตอร์ให้ตรงตามข้อกำหนด</td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            			<td></td>
+            		</tr>
+            	</tbody>
+            </table>
+            <div class="ui horizontal divider">ต่อ</div>
+            <table class="ui basic table">
+            	<tbody>
+            		<tr>
+            			<td>ข้อเสนอแนะเพิ่มเติม</td>
+            			<td>หลักสูตรเทคโนโลยีสารสนเทศ</td>
+            			<td>หลักสูตรวิทยาการคอมพิวเตอร์</td>
+            		</tr>
+            		<tr>
+            			<td rowspan="3">จุดแข็ง</td>
+            			<td class="content">1</td>
+            			<td class="content">1</td>
+            		</tr>
+            		<tr>
+            			<td class="content">2</td>
+            			<td class="content">2</td>
+            		</tr>
+            		<tr>
+            			<td class="content">3</td>
+            			<td class="content">3</td>
+            		</tr>
+            		<tr>
+            			<td rowspan="3">จุดอ่อน</td>
+                  <td class="content">1</td>
+            			<td class="content">1</td>
+            		</tr>
+            		<tr>
+            			<td class="content">2</td>
+            			<td class="content">2</td>
+            		</tr>
+            		<tr>
+            			<td class="content">3</td>
+            			<td class="content">3</td>
+            		</tr>
+            		<tr>
+            			<td rowspan="3">ควรปรับปรุง</td>
+                  <td class="content">1</td>
+            			<td class="content">1</td>
+            		</tr>
+            		<tr>
+            			<td class="content">2</td>
+            			<td class="content">2</td>
+            		</tr>
+            		<tr>
+            			<td class="content">3</td>
+            			<td class="content">3</td>
+            		</tr>
+            		<tr>
+            			<td rowspan="3">ข้อเสนอแนะ</td>
+                  <td class="content">1</td>
+            			<td class="content">1</td>
+            		</tr>
+            		<tr>
+            			<td class="content">2</td>
+            			<td class="content">2</td>
+            		</tr>
+            		<tr>
+            			<td class="content">3</td>
+            			<td class="content">3</td>
+            		</tr>
+            	</tbody>
+            </table>
+            <center>
+              <div class="ui primary submit button"><span style="font-size:18px;">ส่งแบบสอบถาม</span></div>
+            </center>
             <div class="ui error message"></div>
           </form>
       </div>
@@ -655,8 +891,9 @@
             </div>
           </div>
           <div class="seven wide column">
-            <h4 class="ui inverted header">Footer Header</h4>
-            <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+            <h4 class="ui inverted header">Made by </h4>
+            <p>Kunchai Sodhom</p>
+            <p>Taro </p>
           </div>
         </div>
       </div>
