@@ -31,50 +31,636 @@
   <script src="semantic/out/components/transition.js"></script>
   </head>
   <style type="text/css">
-    body {
-      background-image: url('assets/img/bg.jpg');
-      background-size: cover;
+    body{
       font-family: 'Athiti', sans-serif;
       font-size: 18px;
     }
-    body > .grid {
-      height: 100%;
-    }
-    .column{
-      max-width: 1000px;
-    }
-    .content{
-      color:#ffffff;
-      font-size: 1.5em;
+    h1,h2,h3,h4,h5,h6{
       font-family: 'Athiti', sans-serif;
     }
-    h1,h2,h3,h4,h5,h6{
-      font-family: 'Athiti';
+    .ui.form .field > label{
+      font-size: 18px;
     }
+    .ui.checkbox input.hidden+label {
+      font-size: 18px;
+    }
+    .ui.vertical.stripe p{
+      font-size: 2em !important;
+    }
+    .ui.form input[type="text"]{
+      font-family: 'Athiti', sans-serif;
+    }
+    .ui.inverted.segment{
+      background-image: url('assets/img/bg.jpg');
+      background-size: cover;
+    }
+    .hidden.menu {
+      display: none;
+    }
+    .ui.primary.button{
+      font-family: 'Athiti', sans-serif;
+    }
+    .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h3.ui.header {
+      margin-top: 5em;
+      margin-bottom: 0em;
+      font-size: 2em;
+      font-weight: normal;
+      font-family: 'Athiti', sans-serif;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 3em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+
+
   </style>
+
+  <script src="assets/library/jquery.min.js"></script>
+  <script src="http://semantic-ui.com/dist/components/visibility.js"></script>
+  <script src="http://semantic-ui.com/dist/components/sidebar.js"></script>
+  <script src="http://semantic-ui.com/dist/components/transition.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+      $('.ui.checkbox')
+        .checkbox()
+      ;
+
+    })
+  ;
+  </script>
 </head>
 <body>
- <div class="ui middle aligned center aligned grid">
-  <div class="column">
-    <h1 class="ui blue image header">
-      <div class="content">
-        <center>
-          <img src="assets/img/logo.png" class="image" width="35%"><br />
-        </center>
-        แบบสอบถามผู้ใช้บัณฑิตที่มา Firm Presentation
+
+
+  <!-- Page Contents -->
+  <div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment">
+      <div class="ui text container">
+        <h3 class="ui inverted header">
+          <center>
+            <img src="assets/img/logo.png" class="image" width="35%"><br />
+          </center>
+          แบบสอบถามผู้ใช้บัณฑิตที่มา Firm Presentation
+        </h3>
+        <h4>ทางคณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี ขอความอนุเคราะห์จากผู้ใช้บัณฑิต (นายจ้าง/ผู้บังคับบัญชา) กรอกแบบสอบถาม “การสำรวจความพึงพอใจของผู้ใช้บัณฑิต” เพื่อนำผลที่ได้ไปปรับปรุงหลักสูตรการเรียนการสอนและการบริการต่าง ๆ ของคณะฯ ทำให้กระบวนการจัดการศึกษาของคณะ ฯ เป็นไปอย่างมีประสิทธิภาพ และสามารถผลิตบัณฑิตที่มีคุณลักษณะอันพึงประสงค์ตรงกับความต้องการของสังคมต่อไป
+        </h4>
+        <a href="#questionnaire"><div class="ui huge primary button">เริ่มทำแบบสอบถาม <i class="right arrow icon"></i></div></a>
       </div>
-    </h1><br />
-    <span style="color:#fff;">ทางคณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี ขอความอนุเคราะห์จากผู้ใช้บัณฑิต (นายจ้าง/ผู้บังคับบัญชา) กรอกแบบสอบถาม “การสำรวจความพึงพอใจของผู้ใช้บัณฑิต” เพื่อนำผลที่ได้ไปปรับปรุงหลักสูตรการเรียนการสอนและการบริการต่าง ๆ ของคณะฯ ทำให้กระบวนการจัดการศึกษาของคณะ ฯ เป็นไปอย่างมีประสิทธิภาพ และสามารถผลิตบัณฑิตที่มีคุณลักษณะอันพึงประสงค์ตรงกับความต้องการของสังคมต่อไป</span>
-    <br /><br />
-    <a href="company.html">
-    <div class="ui animated blue button" tabindex="0">
-      <div class="visible content">Next</div>
-      <div class="hidden content">
-        <i class="right arrow icon"></i>
+
+    </div>
+    <div class="ui vertical stripe segment" id="questionnaire">
+      <div class="ui container">
+          <form class="ui form">
+            <div class="ui horizontal divider">ต่อ</div>
+            <p>ข้อมูลทั่วไปเกี่ยวบริษัทของผู้กรอก</p>
+            <div class="three fields">
+              <div class="four wide field">
+                <label>คำนำหน้าชื่อ</label>
+                <select class="ui dropdown" name="gender">
+                  <option value="">เลือกคำนำหน้าชื่อ</option>
+                  <option value="mr">นาย</option>
+                  <option value="miss">นางสาว</option>
+                  <option value="mrs">นาง</option>
+                </select>
+              </div>
+              <div class="six wide field">
+                <label>ชื่อ</label>
+                <input placeholder="ชื่อจริง" name="name" type="text">
+              </div>
+              <div class="six wide field">
+                <label>นามสกุล</label>
+                <input placeholder="นามสกุลจริง" name="name" type="text">
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="field">
+                <label>แผนก/ฝ่าย/กอง</label>
+                <input name="" type="text">
+              </div>
+              <div class="field">
+                <label>ตำแหน่งงาน</label>
+                <input type="text" name="">
+              </div>
+            </div>
+            <div class="ui horizontal divider">ต่อ</div>
+            <p>นักศึกษาคณะเทคโนโลยีสารสนเทศ มจธ. ที่ทำงานอยู่ในบริษัททั้งหมดกี่คน โดยแบ่งออกเป็น</p>
+            <div class="four fields">
+              <div class="four wide field">
+                <label>ระดับปริญญาตรี</label>
+              </div>
+              <div class="four wide field">
+                <label>หลักสูตรเทคโนโลยีสารสนเทศ</label>
+              </div>
+              <div class="four wide field">
+                <input placeholder="จำนวน" name="name" type="text">
+              </div>
+              <div class="four wide field">
+                <label>คน</label>
+              </div>
+            </div>
+            <div class="four fields">
+              <div class="four wide field">
+                <label></label>
+              </div>
+              <div class="four wide field">
+                <label>หลักสูตรวิทยาการคอมพิวเตอร์</label>
+              </div>
+              <div class="four wide field">
+                <input placeholder="จำนวน" name="name" type="text">
+              </div>
+              <div class="four wide field">
+                <label>คน</label>
+              </div>
+            </div>
+            <div class="four fields">
+              <div class="four wide field">
+                <label>ระดับปริญญาโท</label>
+              </div>
+              <div class="four wide field">
+                <label>หลักสูตรเทคโนโลยีสารสนเทศ</label>
+              </div>
+              <div class="four wide field">
+                <input placeholder="จำนวน" name="name" type="text">
+              </div>
+              <div class="four wide field">
+                <label>คน</label>
+              </div>
+            </div>
+            <div class="four fields">
+              <div class="four wide field">
+                <label></label>
+              </div>
+              <div class="four wide field">
+                <label>หลักสูตรวิทยาการคอมพิวเตอร์</label>
+              </div>
+              <div class="four wide field">
+                <input placeholder="จำนวน" name="name" type="text">
+              </div>
+              <div class="four wide field">
+                <label>คน</label>
+              </div>
+            </div>
+            <div class="four fields">
+              <div class="four wide field">
+                <label></label>
+              </div>
+              <div class="four wide field">
+                <label>หลักสูตรวิศวกรรมซอฟต์แวร์</label>
+              </div>
+              <div class="four wide field">
+                <input placeholder="จำนวน" name="name" type="text">
+              </div>
+              <div class="four wide field">
+                <label>คน</label>
+              </div>
+            </div>
+            <div class="four fields">
+              <div class="four wide field">
+                <label></label>
+              </div>
+              <div class="four wide field">
+                <label>หลักสูตรระบบสารสนเทศทางธุรกิจ</label>
+              </div>
+              <div class="four wide field">
+                <input placeholder="จำนวน" name="name" type="text">
+              </div>
+              <div class="four wide field">
+                <label>คน</label>
+              </div>
+            </div>
+            <div class="ui horizontal divider">ต่อ</div>
+            <p>เหตุผลสำคัญที่ท่านรับบัณฑิตที่จบจากคณะเทคโนโลยีสารสนเทศ มจธ. เข้าทำงานคือข้อใด</p>
+            <div class="two fields">
+              <div class="eight wide field">
+                <div class="inline field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>1. ชื่อเสียงของคณะเทคโนโลยีสารสนเทศ มจธ. </label>
+                  </div>
+                </div>
+              </div>
+              <div class="eight wide field">
+                <div class="inline field">
+                  <div>
+                    <label style="font-size:18px;">7. ทักษะทางด้าน Soft Skill </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="eight wide field">
+                <div class="inline field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>2. ผลการศึกษา (เกรดเฉลี่ย) ที่จบเป็นที่พอใจ </label>
+                  </div>
+                </div>
+              </div>
+              <div class="eight wide field">
+                <div class="inline field">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label style="font-size:18px;">การติดต่อสื่อสาร </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="eight wide field">
+                <div class="inline field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>3. ผลคะแนนการสอบเข้าทำงาน </label>
+                  </div>
+                </div>
+              </div>
+              <div class="eight wide field">
+                <div class="inline field">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label style="font-size:18px;">มองโลกในแง่ดี </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="eight wide field">
+                <div class="inline field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>4. Certificate </label>
+                  </div>
+                </div>
+              </div>
+              <div class="eight wide field">
+                <div class="inline field">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label style="font-size:18px;">การทำงานร่วมกับผู้อื่น</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="eight wide field">
+                <div class="inline field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>5. ภาษาอังกฤษ </label>
+                  </div>
+                </div>
+              </div>
+              <div class="eight wide field">
+                <div class="inline field">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label style="font-size:18px;">การมีสัมมาคารวะ / รู้จักกาลเทศะ </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="eight wide field">
+                <div class="inline field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>6. ความรู้ความสามารถตรงกับความต้องการ </label>
+                  </div>
+                </div>
+              </div>
+              <div class="eight wide field">
+                <div class="inline field">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label style="font-size:18px;">บุคลิกภาพดี</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="three fields">
+              <div class="eight wide field">
+                <div class="inline field">
+                  <div class="">
+                  </div>
+                </div>
+              </div>
+              <div class="five wide field">
+                <div class="inline field">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label style="font-size:18px;">มีลักษณะของการเป็นผู้นำอื่นๆ โปรดระบุ </label>
+                  </div>
+                </div>
+              </div>
+              <div class="three wide field">
+                <input placeholder="ระบุ" name="name" type="text">
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="eight wide field">
+                <div class="inline field">
+                  <div class="">
+                  </div>
+                </div>
+              </div>
+              <div class="eight wide field">
+                <div class="inline field">
+                  <div class="">
+                    <label style="font-size:18px;">8. อื่นๆ </label>
+                    <input placeholder="ระบุ" name="name" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ui horizontal divider">ต่อ</div>
+            <p>เพื่อให้บัณฑิตเป็นที่ต้องการของตลาดแรงงานมากขึ้น ท่านคิดว่าทางคณะเทคโนโลยีสารสนเทศควรเน้นเนื้อหาวิชาการหรือทักษะด้านใดเพิ่มเติมบ้าง กรุณาใส่เลขเรียงลำดับ 1 - 5 (1 คือเน้นมากที่สุด)</p>
+            <div class="two fields">
+              <div class="three fields">
+                  <div class="two wide field">
+                    <input placeholder="" name="name" type="number">
+                  </div>
+                  <div class="eight wide field">
+                  <span style="font-size:18px;">
+                    1. ใบประกาศนียบัตร / ใบรับรอง วิชาชีพทางด้าน IT (กรุณาระบุ)
+                  </span>
+                  </div>
+                  <div class="five wide field">
+                    <input placeholder="ระบุ" name="name" type="text">
+                  </div>
+              </div>
+              <div class="eight wide field">
+                <div class="two fields">
+                    <div class="two wide field">
+                      <input placeholder="" name="name" type="number">
+                    </div>
+                    <div class="ten wide field">
+                    <span style="font-size:18px;">
+                      7. ความสามารถในการทำงานร่วมกับผู้อื่น และแก้ไขปัญหาการทำงานได้เป็นอย่างดี
+                    </span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="three fields">
+                  <div class="two wide field">
+                    <input placeholder="" name="name" type="number">
+                  </div>
+                  <div class="eight wide field">
+                  <span style="font-size:18px;">
+                    2. การติดต่อสื่อสารด้วยภาษาต่างประเทศ (เช่น จีน อังกฤษ ญี่ปุ่น เป็นต้น)
+                  </span>
+                  </div>
+              </div>
+              <div class="eight wide field">
+                <div class="two fields">
+                    <div class="two wide field">
+                      <input placeholder="" name="name" type="number">
+                    </div>
+                    <div class="ten wide field">
+                    <span style="font-size:18px;">
+                      8. ความขยัน อนทนต่อการทำงาน
+                    </span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="three fields">
+                  <div class="two wide field">
+                    <input placeholder="" name="name" type="number">
+                  </div>
+                  <div class="eight wide field">
+                  <span style="font-size:18px;">
+                    3. ความรู้ด้านระบบคอมฯ / เทคโนโลยีที่ทันสมัย เช่น
+                  </span>
+                  </div>
+                  <div class="five wide field">
+                    <input placeholder="ระบุ" name="name" type="text">
+                  </div>
+              </div>
+              <div class="eight wide field">
+                <div class="two fields">
+                    <div class="two wide field">
+                      <input placeholder="" name="name" type="number">
+                    </div>
+                    <div class="ten wide field">
+                    <span style="font-size:18px;">
+                      9. การประยุกต์วิชาที่เรียนใช้ในการทำงาน
+                    </span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="two fields">
+                  <div class="two wide field">
+                    <input placeholder="" name="name" type="number">
+                  </div>
+                  <div class="ten wide field">
+                  <span style="font-size:18px;">
+                    4. การลงมือปฎิบัติงานในสภานที่จริง
+                  </span>
+                  </div>
+              </div>
+              <div class="eight wide field">
+                <div class="two fields">
+                    <div class="two wide field">
+                      <input placeholder="" name="name" type="number">
+                    </div>
+                    <div class="ten wide field">
+                    <span style="font-size:18px;">
+                      10. เน้นให้รอบรู้ทั้งทฤษฎีและปฎิบัติ
+                    </span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="two fields">
+                  <div class="two wide field">
+                    <input placeholder="" name="name" type="number">
+                  </div>
+                  <div class="ten wide field">
+                  <span style="font-size:18px;">
+                    5. ความเป็นผู้นำและกล้าแสดงออกอย่างสร้างสรรค์ต่อหน้าสาธารณชน
+                  </span>
+                  </div>
+              </div>
+              <div class="eight wide field">
+                <div class="two fields">
+                    <div class="two wide field">
+                      <input placeholder="" name="name" type="number">
+                    </div>
+                    <div class="ten wide field">
+                    <span style="font-size:18px;">
+                      11. ความรับผิดชอบและมีระเบียนวินัย
+                    </span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="two fields">
+                  <div class="two wide field">
+                    <input placeholder="" name="name" type="number">
+                  </div>
+                  <div class="ten wide field">
+                  <span style="font-size:18px;">
+                    6. คุณธรรม จริยธรรม จรรยาบรรณในวิชาชีพ
+                  </span>
+                  </div>
+              </div>
+              <div class="eight wide field">
+                <div class="three fields">
+                    <div class="two wide field">
+                      <input placeholder="" name="name" type="number">
+                    </div>
+                    <div class="three wide field">
+                    <span style="font-size:18px;">
+                      12. อื่นๆ
+                    </span>
+                    </div>
+                    <div class="ten wide field">
+                      <input placeholder="ระบุ" name="name" type="text">
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="ui horizontal divider">ต่อ</div>
+            <p>แสดงความคิดเห็นต่อผลการดำเนินการการเรียนการสอนระดับปริญญาตรี <br /></be>(รายละเอียดหลักสูตรตามเอกสาร <a href="">คลิกที่นี่</a> เพื่อดาวน์โหลดเอกสาร)</p>
+
+            <div class="ui primary submit button">Submit</div>
+            <div class="ui error message"></div>
+          </form>
       </div>
     </div>
-    </a>
-  </div>
+
+
+    <div class="ui inverted vertical footer segment">
+      <div class="ui container">
+        <div class="ui stackable inverted divided equal height stackable grid">
+          <div class="three wide column">
+            <h4 class="ui inverted header">About</h4>
+            <div class="ui inverted link list">
+              <a href="#" class="item">Sitemap</a>
+              <a href="#" class="item">Contact Us</a>
+              <a href="#" class="item">Religious Ceremonies</a>
+              <a href="#" class="item">Gazebo Plans</a>
+            </div>
+          </div>
+          <div class="three wide column">
+            <h4 class="ui inverted header">Services</h4>
+            <div class="ui inverted link list">
+              <a href="#" class="item">Banana Pre-Order</a>
+              <a href="#" class="item">DNA FAQ</a>
+              <a href="#" class="item">How To Access</a>
+              <a href="#" class="item">Favorite X-Men</a>
+            </div>
+          </div>
+          <div class="seven wide column">
+            <h4 class="ui inverted header">Footer Header</h4>
+            <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </body>
