@@ -24,8 +24,10 @@
     <link rel="stylesheet" type="text/css" href="semantic/out/components/list.css">
     <link rel="stylesheet" type="text/css" href="semantic/out/components/message.css">
     <link rel="stylesheet" type="text/css" href="semantic/out/components/icon.css">
-    <script src="assets/library/jquery.min.js"></script>
     <script src="semantic/out/components/form.js"></script>
+    <script src="semantic/out/components/transition.js"></script>
+    <script src="semantic/out/components/visibility.js"></script>
+    <script src="semantic/out/components/sidebar.js"></script>
     <script src="semantic/out/components/transition.js"></script>
   </head>
   <style type="text/css">
@@ -155,11 +157,6 @@
 
 
   </style>
-
-  <script src="assets/library/jquery.min.js"></script>
-  <script src="http://semantic-ui.com/dist/components/visibility.js"></script>
-  <script src="http://semantic-ui.com/dist/components/sidebar.js"></script>
-  <script src="http://semantic-ui.com/dist/components/transition.js"></script>
   <script>
   $(document)
     .ready(function() {
@@ -510,7 +507,7 @@
                 </div>
               </div>
               <div class="three wide field">
-                <input placeholder="ระบุ" name="name" type="text" name="reason76add">
+                <input placeholder="ระบุ" type="text" name="reason76add">
               </div>
             </div>
             <div class="two fields">
@@ -524,7 +521,7 @@
                 <div class="inline field">
                   <div class="">
                     <label style="font-size:18px;">8. อื่นๆ </label>
-                    <input placeholder="ระบุ" name="name" type="text" name="reason8">
+                    <input placeholder="ระบุ" type="text" name="reason8">
                   </div>
                 </div>
               </div>
@@ -1322,5 +1319,41 @@
   <script>
   $('.ui.dropdown')
   .dropdown();
+  $('.ui.form')
+  .form({
+    fields: {
+      //section 1
+      company       : 'empty',
+      number        : 'empty',
+      village       : 'empty',
+      building      : 'empty',
+      floor         : ['minLength[2]', 'empty'],
+      road          : 'empty',
+      subarea       : 'empty',
+      area          : 'empty',
+      province      : 'empty',
+      zip           : ['minLength[5]', 'empty'],
+      tel           : ['minLength[9]', 'empty'], //ไม่ต้องใส่ขีด
+      email         : 'empty',
+      title         : 'empty',
+      name          : 'empty',
+      surname       : 'empty',
+      section       : 'empty',
+      position      : 'empty',
+      //section 2
+      bscit         : 'empty',
+      bsccs         : 'empty',
+      mscit         : 'empty',
+      msccs         : 'empty',
+      mscse         : 'empty',
+      mscbis        : 'empty',
+      //section 3
+
+      //section 4
+
+
+    }
+  })
+;
   </script>
 </html>
