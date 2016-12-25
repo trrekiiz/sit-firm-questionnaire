@@ -17,7 +17,7 @@ class InsertRepository implements InsertRepositoryInterface
       $questionair->company = array_get($data,'company');
       $questionair->number = array_get($data,'number');
       $questionair->village = array_get($data,'village');
-      $questionair->building = array_get($data,'building'); 
+      $questionair->building = array_get($data,'building');
       $questionair->floor = array_get($data,'floor');
       $questionair->road = array_get($data,'road');
       $questionair->subarea = array_get($data,'subarea');

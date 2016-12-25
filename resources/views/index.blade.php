@@ -1320,36 +1320,280 @@
   $('.ui.dropdown')
   .dropdown();
 
-  validation
   $('.ui.form')
   .form({
     fields: {
       //section 1
-      company       : 'empty',
-      number        : 'empty',
-      village       : 'empty',
-      building      : 'empty',
-      floor         : ['minLength[2]', 'empty'],
-      road          : 'empty',
-      subarea       : 'empty',
-      area          : 'empty',
-      province      : 'empty',
-      zip           : ['minLength[5]', 'empty'],
-      tel           : ['minLength[9]', 'empty'], //ไม่ต้องใส่ขีด
-      email         : 'empty',
-      title         : 'empty',
-      name          : 'empty',
-      surname       : 'empty',
-      section       : 'empty',
-      position      : 'empty',
-      //section 2
-      bscit         : 'empty',
-      bsccs         : 'empty',
-      mscit         : 'empty',
-      msccs         : 'empty',
-      mscse         : 'empty',
-      mscbis        : 'empty'
-  })
-;
+      company: {
+        identifier: 'company',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'กรุณากรอกชื่อบริษัทของท่าน'
+          }
+        ]
+      },
+      number: {
+        identifier: 'number',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'กรุณากรอกเลขที่ตั้งของบริษัท'
+          }
+        ]
+      },
+      building: {
+        identifier: 'building',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'กรุณากรอกชื่ออาคาร'
+          }
+        ]
+      },
+      road: {
+        identifier: 'road',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'กรุณากรอกถนนของที่ตั้งของบริษัท'
+          }
+        ]
+      },
+      subarea: {
+        identifier: 'subarea',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'กรุณากรอกแขวง/ตำบลของที่ตั้งบริษัท'
+          }
+        ]
+      },
+      area: {
+        identifier: 'area',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'กรุณากรอกเขตของที่ตั้งบริษัท'
+          }
+        ]
+      },
+      province: {
+        identifier: 'province',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'กรุณากรอกจังหวัดของบริษัท'
+          }
+        ]
+      },
+      zip: {
+        identifier: 'zip',
+        rules: [
+          {
+            type   : 'minLength[5]',
+            prompt : 'กรอกรหัสไปรษณีย์ไม่ถูกต้อง'
+          }
+        ]
+      },
+      tel: {
+        identifier: 'tel',
+        rules: [
+          {
+            type   : 'minLength[9]',
+            prompt : 'กรอกเบอร์โทรศัพท์ไม่ถูกต้อง'
+          }
+        ]
+      },
+      email: {
+        identifier: 'email',
+        rules: [
+          {
+            type   : 'email',
+            prompt : 'กรอกอีเมลล์ไม่ถูกต้อง'
+          }
+        ]
+      },
+      title: {
+        identifier: 'title',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'กรุณาใส่คำนำหน้าชื่อ'
+          }
+        ]
+      },
+      name: {
+        identifier: 'name',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'กรุณาใส่ชื่อของท่าน'
+          }
+        ]
+      },
+      surname: {
+        identifier: 'surname',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'กรุณาใส่นามสกุลของท่าน'
+          }
+        ]
+      },
+
+
+      //section3
+      reason76add: {
+        identifier : 'reason76add',
+        depends    : 'reason76',
+        rules      : [
+          {
+            type   : 'empty',
+            prompt : 'กรุณากรอกความเห็นด้วยนะ ลักษณะผู้นำอย่างไร'
+          }
+        ]
+      },
+      //section4
+      want1: {
+        identifier: 'want1',
+        rules: [
+          {
+            type   : 'integer[1..5]',
+            prompt : 'กรุณาใส่เลข 1 - 5 '
+          }
+        ]
+      },
+      want2: {
+        identifier: 'want2',
+        rules: [
+          {
+            type   : 'integer[1..5]',
+            prompt : 'กรุณาใส่เลข 1 - 5 '
+          }
+        ]
+      },
+      want3: {
+        identifier: 'want3',
+        rules: [
+          {
+            type   : 'integer[1..5]',
+            prompt : 'กรุณาใส่เลข 1 - 5 '
+          }
+        ]
+      },
+      want4: {
+        identifier: 'want4',
+        rules: [
+          {
+            type   : 'integer[1..5]',
+            prompt : 'กรุณาใส่เลข 1 - 5 '
+          }
+        ]
+      },
+      want5: {
+        identifier: 'want5',
+        rules: [
+          {
+            type   : 'integer[1..5]',
+            prompt : 'กรุณาใส่เลข 1 - 5 '
+          }
+        ]
+      },
+      want6: {
+        identifier: 'want6',
+        rules: [
+          {
+            type   : 'integer[1..5]',
+            prompt : 'กรุณาใส่เลข 1 - 5 '
+          }
+        ]
+      },
+      want7: {
+        identifier: 'want7',
+        rules: [
+          {
+            type   : 'integer[1..5]',
+            prompt : 'กรุณาใส่เลข 1 - 5 '
+          }
+        ]
+      },
+      want8: {
+        identifier: 'want8',
+        rules: [
+          {
+            type   : 'integer[1..5]',
+            prompt : 'กรุณาใส่เลข 1 - 5 '
+          }
+        ]
+      },
+      want9: {
+        identifier: 'want9',
+        rules: [
+          {
+            type   : 'integer[1..5]',
+            prompt : 'กรุณาใส่เลข 1 - 5 '
+          }
+        ]
+      },
+      want10: {
+        identifier: 'want10',
+        rules: [
+          {
+            type   : 'integer[1..5]',
+            prompt : 'กรุณาใส่เลข 1 - 5 '
+          }
+        ]
+      },
+      want11: {
+        identifier: 'want11',
+        rules: [
+          {
+            type   : 'integer[1..5]',
+            prompt : 'กรุณาใส่เลข 1 - 5 '
+          }
+        ]
+      },
+      want12: {
+        identifier: 'want12',
+        rules: [
+          {
+            type   : 'integer[1..5]',
+            prompt : 'กรุณาใส่เลข 1 - 5 '
+          }
+        ]
+      },
+      want1add: {
+        identifier : 'want1add',
+        depends    : 'want1',
+        rules      : [
+          {
+            type   : 'empty',
+            prompt : 'กรุณาระบุ ประกาศนีย์บัตร / ใบรับรอง ด้วยนะ'
+          }
+        ]
+      },
+      want3add: {
+        identifier : 'want3add',
+        depends    : 'want3',
+        rules      : [
+          {
+            type   : 'empty',
+            prompt : 'กรุณาเติมเช่นด้วยนะ '
+          }
+        ]
+      },
+      want12add: {
+        identifier : 'want12add',
+        depends    : 'want12',
+        rules      : [
+          {
+            type   : 'empty',
+            prompt : 'กรุณาระบุอื่นๆ ด้วย'
+          }
+        ]
+      }
+    }
+  });
   </script>
 </html>
