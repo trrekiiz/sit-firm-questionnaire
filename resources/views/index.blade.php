@@ -1455,114 +1455,114 @@
         ]
       },
       //section4
-      want1: {
-        identifier: 'want1',
-        rules: [
-          {
-            type   : 'integer[1..5]',
-            prompt : 'กรุณาใส่เลข 1 - 5 '
-          }
-        ]
-      },
-      want2: {
-        identifier: 'want2',
-        rules: [
-          {
-            type   : 'integer[1..5]',
-            prompt : 'กรุณาใส่เลข 1 - 5 '
-          }
-        ]
-      },
-      want3: {
-        identifier: 'want3',
-        rules: [
-          {
-            type   : 'integer[1..5]',
-            prompt : 'กรุณาใส่เลข 1 - 5 '
-          }
-        ]
-      },
-      want4: {
-        identifier: 'want4',
-        rules: [
-          {
-            type   : 'integer[1..5]',
-            prompt : 'กรุณาใส่เลข 1 - 5 '
-          }
-        ]
-      },
-      want5: {
-        identifier: 'want5',
-        rules: [
-          {
-            type   : 'integer[1..5]',
-            prompt : 'กรุณาใส่เลข 1 - 5 '
-          }
-        ]
-      },
-      want6: {
-        identifier: 'want6',
-        rules: [
-          {
-            type   : 'integer[1..5]',
-            prompt : 'กรุณาใส่เลข 1 - 5 '
-          }
-        ]
-      },
-      want7: {
-        identifier: 'want7',
-        rules: [
-          {
-            type   : 'integer[1..5]',
-            prompt : 'กรุณาใส่เลข 1 - 5 '
-          }
-        ]
-      },
-      want8: {
-        identifier: 'want8',
-        rules: [
-          {
-            type   : 'integer[1..5]',
-            prompt : 'กรุณาใส่เลข 1 - 5 '
-          }
-        ]
-      },
-      want9: {
-        identifier: 'want9',
-        rules: [
-          {
-            type   : 'integer[1..5]',
-            prompt : 'กรุณาใส่เลข 1 - 5 '
-          }
-        ]
-      },
-      want10: {
-        identifier: 'want10',
-        rules: [
-          {
-            type   : 'integer[1..5]',
-            prompt : 'กรุณาใส่เลข 1 - 5 '
-          }
-        ]
-      },
-      want11: {
-        identifier: 'want11',
-        rules: [
-          {
-            type   : 'integer[1..5]',
-            prompt : 'กรุณาใส่เลข 1 - 5 '
-          }
-        ]
-      },
-      want12: {
-        identifier: 'want12',
-        rules: [
-          {
-            type   : 'integer[1..5]',
-            prompt : 'กรุณาใส่เลข 1 - 5 '
-          }
-        ]
-      },
+      // want1: {
+      //   identifier: 'want1',
+      //   rules: [
+      //     {
+      //       type   : 'integer[1..5]',
+      //       prompt : 'กรุณาใส่เลข 1 - 5 '
+      //     }
+      //   ]
+      // },
+      // want2: {
+      //   identifier: 'want2',
+      //   rules: [
+      //     {
+      //       type   : 'integer[1..5]',
+      //       prompt : 'กรุณาใส่เลข 1 - 5 '
+      //     }
+      //   ]
+      // },
+      // want3: {
+      //   identifier: 'want3',
+      //   rules: [
+      //     {
+      //       type   : 'integer[1..5]',
+      //       prompt : 'กรุณาใส่เลข 1 - 5 '
+      //     }
+      //   ]
+      // },
+      // want4: {
+      //   identifier: 'want4',
+      //   rules: [
+      //     {
+      //       type   : 'integer[1..5]',
+      //       prompt : 'กรุณาใส่เลข 1 - 5 '
+      //     }
+      //   ]
+      // },
+      // want5: {
+      //   identifier: 'want5',
+      //   rules: [
+      //     {
+      //       type   : 'integer[1..5]',
+      //       prompt : 'กรุณาใส่เลข 1 - 5 '
+      //     }
+      //   ]
+      // },
+      // want6: {
+      //   identifier: 'want6',
+      //   rules: [
+      //     {
+      //       type   : 'integer[1..5]',
+      //       prompt : 'กรุณาใส่เลข 1 - 5 '
+      //     }
+      //   ]
+      // },
+      // want7: {
+      //   identifier: 'want7',
+      //   rules: [
+      //     {
+      //       type   : 'integer[1..5]',
+      //       prompt : 'กรุณาใส่เลข 1 - 5 '
+      //     }
+      //   ]
+      // },
+      // want8: {
+      //   identifier: 'want8',
+      //   rules: [
+      //     {
+      //       type   : 'integer[1..5]',
+      //       prompt : 'กรุณาใส่เลข 1 - 5 '
+      //     }
+      //   ]
+      // },
+      // want9: {
+      //   identifier: 'want9',
+      //   rules: [
+      //     {
+      //       type   : 'integer[1..5]',
+      //       prompt : 'กรุณาใส่เลข 1 - 5 '
+      //     }
+      //   ]
+      // },
+      // want10: {
+      //   identifier: 'want10',
+      //   rules: [
+      //     {
+      //       type   : 'integer[1..5]',
+      //       prompt : 'กรุณาใส่เลข 1 - 5 '
+      //     }
+      //   ]
+      // },
+      // want11: {
+      //   identifier: 'want11',
+      //   rules: [
+      //     {
+      //       type   : 'integer[1..5]',
+      //       prompt : 'กรุณาใส่เลข 1 - 5 '
+      //     }
+      //   ]
+      // },
+      // want12: {
+      //   identifier: 'want12',
+      //   rules: [
+      //     {
+      //       type   : 'integer[1..5]',
+      //       prompt : 'กรุณาใส่เลข 1 - 5 '
+      //     }
+      //   ]
+      // },
       want1add: {
         identifier : 'want1add',
         depends    : 'want1',
