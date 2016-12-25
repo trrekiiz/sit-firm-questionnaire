@@ -44,6 +44,12 @@
     .ui.checkbox input.hidden+label {
       font-size: 18px;
     }
+    .ui.form input[type="number"]{
+      font-family: 'Athiti', sans-serif;
+    }
+    .ui.form input[type="email"]{
+      font-family: 'Athiti', sans-serif;
+    }
     .ui.vertical.stripe p{
       font-size: 2em !important;
     }
@@ -1305,10 +1311,11 @@
                 126 Pracha Uthit Rd., Bang Mod, Thung Khru, Bangkok, Thailand 10140</h4>
             <h5>โทร. 0-2470-9889</h5>
           </div>
-          <div class="three wide column">
-            <h4 class="ui inverted header">Made by </h4>
-            <p>Kunchai Sodhom</p>
-            <p>Taro </p>
+          <div class="three wide column"><br />
+            <h4 class="ui inverted header">Develop by </h4>
+            <h4 class="">Kunchai Sodhom </h4>
+            <h4 class="">Aphiphit Thammarcheep </h4>
+            <h4 class="">Worachat Arunothaikrit</h4>
           </div>
         </div>
       </div>
