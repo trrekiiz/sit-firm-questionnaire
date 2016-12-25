@@ -1320,41 +1320,36 @@
   $('.ui.dropdown')
   .dropdown();
 
-  //validation
-  //$('.ui.form')
-  // .form({
-  //   fields: {
-  //     //section 1
-  //     // company       : 'empty',
-  //     // number        : 'empty',
-  //     // village       : 'empty',
-  //     // building      : 'empty',
-  //     // floor         : ['minLength[2]', 'empty'],
-  //     // road          : 'empty',
-  //     // subarea       : 'empty',
-  //     // area          : 'empty',
-  //     // province      : 'empty',
-  //     // zip           : ['minLength[5]', 'empty'],
-  //     // tel           : ['minLength[9]', 'empty'], //ไม่ต้องใส่ขีด
-  //     // email         : 'empty',
-  //     // title         : 'empty',
-  //     // name          : 'empty',
-  //     // surname       : 'empty',
-  //     // section       : 'empty',
-  //     // position      : 'empty',
-  //     //section 2
-  //     // bscit         : 'empty',
-  //     // bsccs         : 'empty',
-  //     // mscit         : 'empty',
-  //     // msccs         : 'empty',
-  //     // mscse         : 'empty',
-  //     // mscbis        : 'empty'
-  //     //section 3
-  //
-  //     //section 4
-  //
-  //
-  // })
-//;
+  validation
+  $('.ui.form')
+  .form({
+    fields: {
+      //section 1
+      company       : 'empty',
+      number        : 'empty',
+      village       : 'empty',
+      building      : 'empty',
+      floor         : ['minLength[2]', 'empty'],
+      road          : 'empty',
+      subarea       : 'empty',
+      area          : 'empty',
+      province      : 'empty',
+      zip           : ['minLength[5]', 'empty'],
+      tel           : ['minLength[9]', 'empty'], //ไม่ต้องใส่ขีด
+      email         : 'empty',
+      title         : 'empty',
+      name          : 'empty',
+      surname       : 'empty',
+      section       : 'empty',
+      position      : 'empty',
+      //section 2
+      bscit         : 'empty',
+      bsccs         : 'empty',
+      mscit         : 'empty',
+      msccs         : 'empty',
+      mscse         : 'empty',
+      mscbis        : 'empty'
+  })
+;
   </script>
 </html>
