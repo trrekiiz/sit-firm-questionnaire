@@ -160,7 +160,9 @@
     .ui.basic.table .content {
       text-align: left;
     }
-
+    .ui.selection.dropdown.want {
+      min-width: 4em; !important;
+    }
 
   </style>
   <script>
@@ -533,137 +535,226 @@
               </div>
             </div>
             <div class="ui horizontal divider">ต่อ</div>
-            <p>เพื่อให้บัณฑิตเป็นที่ต้องการของตลาดแรงงานมากขึ้น ท่านคิดว่าทางคณะเทคโนโลยีสารสนเทศควรเน้นเนื้อหาวิชาการหรือทักษะด้านใดเพิ่มเติมบ้าง กรุณาใส่เลขเรียงลำดับ 1 - 5 (1 คือเน้นมากที่สุด)</p>
-            <div class="two fields">
-              <div class="three fields">
-                  <div class="two wide field">
-                    <input placeholder="" name="want1" type="number">
-                  </div>
-                  <div class="eight wide field">
-                  <span style="font-size:18px;">
-                    1. ใบประกาศนียบัตร / ใบรับรอง วิชาชีพทางด้าน IT (กรุณาระบุ)
-                  </span>
-                  </div>
-                  <div class="five wide field">
-                    <input placeholder="ระบุ" name="want1add" type="text">
-                  </div>
+            <div class="want-list">
+              <p>เพื่อให้บัณฑิตเป็นที่ต้องการของตลาดแรงงานมากขึ้น ท่านคิดว่าทางคณะเทคโนโลยีสารสนเทศควรเน้นเนื้อหาวิชาการหรือทักษะด้านใดเพิ่มเติมบ้าง กรุณาใส่เลขเรียงลำดับ 1 - 5 (1 คือเน้นมากที่สุด)</p>
+              <div class="two fields">
+                <div class="three fields">
+                    <div class="two wide field">
+                      <select class="ui dropdown want" name="want1">
+                        <option value="">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                      <!-- <input placeholder="" name="want1" type="number" class="autohide"> -->
+                    </div>
+                    <div class="eight wide field">
+                    <span style="font-size:18px;">
+                      1. ใบประกาศนียบัตร / ใบรับรอง วิชาชีพทางด้าน IT (กรุณาระบุ)
+                    </span>
+                    </div>
+                    <div class="five wide field">
+                      <input placeholder="ระบุ" name="want1add" type="text">
+                    </div>
+                </div>
+                <div class="eight wide field">
+                  <div class="two fields">
+                      <div class="two wide field">
+                        <!-- <input placeholder="" name="want7" type="number" class="autohide"> -->
+                        <select class="ui dropdown want" name="want7">
+                          <option value="">-</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                      <div class="ten wide field">
+                      <span style="font-size:18px;">
+                        7. ความสามารถในการทำงานร่วมกับผู้อื่น และแก้ไขปัญหาการทำงานได้เป็นอย่างดี
+                      </span>
+                      </div>
+                    </div>
+                </div>
               </div>
-              <div class="eight wide field">
+              <div class="two fields">
+                <div class="three fields">
+                    <div class="two wide field">
+                      <select class="ui dropdown want" name="want2">
+                        <option value="">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                      <!-- <input placeholder="" name="want2" type="number" class="autohide"> -->
+                    </div>
+                    <div class="eight wide field">
+                    <span style="font-size:18px;">
+                      2. การติดต่อสื่อสารด้วยภาษาต่างประเทศ (เช่น จีน อังกฤษ ญี่ปุ่น เป็นต้น)
+                    </span>
+                    </div>
+                </div>
+                <div class="eight wide field">
+                  <div class="two fields">
+                      <div class="two wide field">
+                        <!-- <input placeholder="" name="want8" type="number" class="autohide"> -->
+                        <select class="ui dropdown want" name="want8">
+                          <option value="">-</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                      <div class="ten wide field">
+                      <span style="font-size:18px;">
+                        8. ความขยัน อนทนต่อการทำงาน
+                      </span>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="two fields">
+                <div class="three fields">
+                    <div class="two wide field">
+                      <select class="ui dropdown want" name="want3">
+                        <option value="">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                      <!-- <input placeholder="" name="want3" type="number" class="autohide"> -->
+                    </div>
+                    <div class="eight wide field">
+                    <span style="font-size:18px;">
+                      3. ความรู้ด้านระบบคอมฯ / เทคโนโลยีที่ทันสมัย เช่น
+                    </span>
+                    </div>
+                    <div class="five wide field">
+                      <input placeholder="ระบุ" name="want3add" type="text">
+                    </div>
+                </div>
+                <div class="eight wide field">
+                  <div class="two fields">
+                      <div class="two wide field">
+                        <select class="ui dropdown want" name="want9">
+                          <option value="">-</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                        <!-- <input placeholder="" name="want9" type="number" class="autohide"> -->
+                      </div>
+                      <div class="ten wide field">
+                      <span style="font-size:18px;">
+                        9. การประยุกต์วิชาที่เรียนใช้ในการทำงาน
+                      </span>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="two fields">
                 <div class="two fields">
                     <div class="two wide field">
-                      <input placeholder="" name="want7" type="number">
+                      <select class="ui dropdown want" name="want4">
+                        <option value="">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                      <!-- <input placeholder="" name="want4" type="number" class="autohide"> -->
                     </div>
                     <div class="ten wide field">
                     <span style="font-size:18px;">
-                      7. ความสามารถในการทำงานร่วมกับผู้อื่น และแก้ไขปัญหาการทำงานได้เป็นอย่างดี
+                      4. การลงมือปฎิบัติงานในสภานที่จริง
                     </span>
                     </div>
-                  </div>
+                </div>
+                <div class="eight wide field">
+                  <div class="two fields">
+                      <div class="two wide field">
+                        <select class="ui dropdown want" name="want10">
+                          <option value="">-</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                        <!-- <input placeholder="" name="want10" type="number" class="autohide"> -->
+                      </div>
+                      <div class="ten wide field">
+                      <span style="font-size:18px;">
+                        10. เน้นให้รอบรู้ทั้งทฤษฎีและปฎิบัติ
+                      </span>
+                      </div>
+                    </div>
+                </div>
               </div>
-            </div>
-            <div class="two fields">
-              <div class="three fields">
-                  <div class="two wide field">
-                    <input placeholder="" name="want2" type="number">
-                  </div>
-                  <div class="eight wide field">
-                  <span style="font-size:18px;">
-                    2. การติดต่อสื่อสารด้วยภาษาต่างประเทศ (เช่น จีน อังกฤษ ญี่ปุ่น เป็นต้น)
-                  </span>
-                  </div>
-              </div>
-              <div class="eight wide field">
+              <div class="two fields">
                 <div class="two fields">
                     <div class="two wide field">
-                      <input placeholder="" name="want8" type="number">
+                      <select class="ui dropdown want" name="want5">
+                        <option value="">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                      <!-- <input placeholder="" name="want5" type="number" class="autohide"> -->
                     </div>
                     <div class="ten wide field">
                     <span style="font-size:18px;">
-                      8. ความขยัน อนทนต่อการทำงาน
+                      5. ความเป็นผู้นำและกล้าแสดงออกอย่างสร้างสรรค์ต่อหน้าสาธารณชน
                     </span>
                     </div>
-                  </div>
-              </div>
-            </div>
-            <div class="two fields">
-              <div class="three fields">
-                  <div class="two wide field">
-                    <input placeholder="" name="want3" type="number">
-                  </div>
-                  <div class="eight wide field">
-                  <span style="font-size:18px;">
-                    3. ความรู้ด้านระบบคอมฯ / เทคโนโลยีที่ทันสมัย เช่น
-                  </span>
-                  </div>
-                  <div class="five wide field">
-                    <input placeholder="ระบุ" name="want3add" type="text">
-                  </div>
-              </div>
-              <div class="eight wide field">
-                <div class="two fields">
-                    <div class="two wide field">
-                      <input placeholder="" name="want9" type="number">
+                </div>
+                <div class="eight wide field">
+                  <div class="two fields">
+                      <div class="two wide field">
+                        <select class="ui dropdown want" name="want11">
+                          <option value="">-</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                        <!-- <input placeholder="" name="want11" type="number" class="autohide"> -->
+                      </div>
+                      <div class="ten wide field">
+                      <span style="font-size:18px;">
+                        11. ความรับผิดชอบและมีระเบียนวินัย
+                      </span>
+                      </div>
                     </div>
-                    <div class="ten wide field">
-                    <span style="font-size:18px;">
-                      9. การประยุกต์วิชาที่เรียนใช้ในการทำงาน
-                    </span>
-                    </div>
-                  </div>
+                </div>
               </div>
-            </div>
-            <div class="two fields">
+              <div class="two fields">
               <div class="two fields">
                   <div class="two wide field">
-                    <input placeholder="" name="want4" type="number">
-                  </div>
-                  <div class="ten wide field">
-                  <span style="font-size:18px;">
-                    4. การลงมือปฎิบัติงานในสภานที่จริง
-                  </span>
-                  </div>
-              </div>
-              <div class="eight wide field">
-                <div class="two fields">
-                    <div class="two wide field">
-                      <input placeholder="" name="want10" type="number">
-                    </div>
-                    <div class="ten wide field">
-                    <span style="font-size:18px;">
-                      10. เน้นให้รอบรู้ทั้งทฤษฎีและปฎิบัติ
-                    </span>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <div class="two fields">
-              <div class="two fields">
-                  <div class="two wide field">
-                    <input placeholder="" name="want5" type="number">
-                  </div>
-                  <div class="ten wide field">
-                  <span style="font-size:18px;">
-                    5. ความเป็นผู้นำและกล้าแสดงออกอย่างสร้างสรรค์ต่อหน้าสาธารณชน
-                  </span>
-                  </div>
-              </div>
-              <div class="eight wide field">
-                <div class="two fields">
-                    <div class="two wide field">
-                      <input placeholder="" name="want11" type="number">
-                    </div>
-                    <div class="ten wide field">
-                    <span style="font-size:18px;">
-                      11. ความรับผิดชอบและมีระเบียนวินัย
-                    </span>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <div class="two fields">
-              <div class="two fields">
-                  <div class="two wide field">
-                    <input placeholder="" name="want6" type="number">
+                    <select class="ui dropdown want" name="want6">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <!-- <input placeholder="" name="want6" type="number" class="autohide"> -->
                   </div>
                   <div class="ten wide field">
                   <span style="font-size:18px;">
@@ -674,7 +765,15 @@
               <div class="eight wide field">
                 <div class="three fields">
                     <div class="two wide field">
-                      <input placeholder="" name="want12" type="number">
+                      <select class="ui dropdown want" name="want12">
+                        <option value="">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                      <!-- <input placeholder="" name="want12" type="number" class="autohide"> -->
                     </div>
                     <div class="three wide field">
                     <span style="font-size:18px;">
@@ -686,6 +785,8 @@
                     </div>
                 </div>
               </div>
+
+            </div>
             </div>
             <div class="ui horizontal divider">ต่อ</div>
             <p>แสดงความคิดเห็นต่อผลการดำเนินการการเรียนการสอนระดับปริญญาตรี <br /></be>(รายละเอียดหลักสูตรตามเอกสาร <a href="">คลิกที่นี่</a> เพื่อดาวน์โหลดเอกสาร)</p>
@@ -1602,5 +1703,32 @@
       }
     }
   });
+
+
+
+  $('.want-list select').on("change",function(){
+      console.log($(this).val());
+      var selector = [];
+
+      $('.want-list select').map(function(a,b){
+
+        $('.want-list select option[value="'+b.value+'"]').map(function(key,value){
+            $(this).prop('disabled', true);
+            $('.want-list .menu').find('.item[data-value="'+b.value+'"]').addClass('disabled');
+
+        });
+
+      });
+
+  });
+  $('.clear .button')
+  .on('click', function() {
+    $('.clear .ui.dropdown.want')
+      .dropdown('clear')
+    ;
+  })
+;
+
+
   </script>
 </html>
