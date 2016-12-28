@@ -785,7 +785,6 @@
                     </div>
                 </div>
               </div>
-
             </div>
             </div>
             <div class="ui horizontal divider">ต่อ</div>
@@ -1709,25 +1708,13 @@
   $('.want-list select').on("change",function(){
       console.log($(this).val());
       var selector = [];
-
       $('.want-list select').map(function(a,b){
-
         $('.want-list select option[value="'+b.value+'"]').map(function(key,value){
             $(this).prop('disabled', true);
             $('.want-list .menu').find('.item[data-value="'+b.value+'"]').addClass('disabled');
-
         });
-
       });
-
   });
-  $('.clear .button')
-  .on('click', function() {
-    $('.clear .ui.dropdown.want')
-      .dropdown('clear')
-    ;
-  })
-;
 
 
   </script>
