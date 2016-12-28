@@ -29,6 +29,8 @@
     <script src="semantic/out/components/visibility.js"></script>
     <script src="semantic/out/components/sidebar.js"></script>
     <script src="semantic/out/components/transition.js"></script>
+    <link rel="shortcut icon" href="https://www4.sit.kmutt.ac.th/files/favicon.png" type="image/png">
+    <meta property="og:image" content="{{ URL::asset('/img/og.png') }}">
   </head>
   <style type="text/css">
     body{
