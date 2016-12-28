@@ -163,6 +163,9 @@
     .ui.selection.dropdown.want {
       min-width: 4em; !important;
     }
+    .ui.basic.table td.cs {
+    background-color: rgba(220, 220, 220, 0.2);
+    }
 
   </style>
   <script>
@@ -203,7 +206,7 @@
         </h3>
         <h4>ทางคณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี ขอความอนุเคราะห์จากผู้ใช้บัณฑิต (นายจ้าง/ผู้บังคับบัญชา) กรอกแบบสอบถาม “การสำรวจความพึงพอใจของผู้ใช้บัณฑิต” เพื่อนำผลที่ได้ไปปรับปรุงหลักสูตรการเรียนการสอนและการบริการต่าง ๆ ของคณะฯ ทำให้กระบวนการจัดการศึกษาของคณะ ฯ เป็นไปอย่างมีประสิทธิภาพ และสามารถผลิตบัณฑิตที่มีคุณลักษณะอันพึงประสงค์ตรงกับความต้องการของสังคมต่อไป
         </h4>
-        <a href="#questionnaire"><div class="ui huge primary button">เริ่มทำแบบสอบถาม <i class="right arrow icon"></i></div></a>
+        <a href="#questionnaire"><div class="ui huge primary button" id="start">เริ่มทำแบบสอบถาม <i class="right arrow icon"></i></div></a>
       </div>
 
     </div>
@@ -267,7 +270,7 @@
                 <input placeholder="กรอกอีเมล์" name="email" type="email">
               </div>
             </div>
-            <div class="ui horizontal divider">ต่อ</div>
+            <div class="ui dividing header"></div>
             <p>ข้อมูลทั่วไปเกี่ยวกับผู้กรอก</p>
             <div class="three fields">
               <div class="four wide field">
@@ -298,7 +301,7 @@
                 <input type="text" name="position">
               </div>
             </div>
-            <div class="ui horizontal divider">ต่อ</div>
+            <div class="ui dividing header"></div>
             <p>นักศึกษาคณะเทคโนโลยีสารสนเทศ มจธ. ที่ทำงานอยู่ในบริษัททั้งหมดกี่คน โดยแบ่งออกเป็น</p>
             <div class="four fields">
               <div class="four wide field">
@@ -384,7 +387,7 @@
                 <label>คน</label>
               </div>
             </div>
-            <div class="ui horizontal divider">ต่อ</div>
+            <div class="ui dividing header"></div>
             <p>เหตุผลสำคัญที่ท่านรับบัณฑิตที่จบจากคณะเทคโนโลยีสารสนเทศ มจธ. เข้าทำงานคือข้อใด</p>
             <div class="two fields">
               <div class="eight wide field">
@@ -534,7 +537,7 @@
                 </div>
               </div>
             </div>
-            <div class="ui horizontal divider">ต่อ</div>
+            <div class="ui dividing header"></div>
             <div class="want-list">
               <p>เพื่อให้บัณฑิตเป็นที่ต้องการของตลาดแรงงานมากขึ้น ท่านคิดว่าทางคณะเทคโนโลยีสารสนเทศควรเน้นเนื้อหาวิชาการหรือทักษะด้านใดเพิ่มเติมบ้าง กรุณาใส่เลขเรียงลำดับ 1 - 5 (1 คือเน้นมากที่สุด)</p>
               <div class="two fields">
@@ -787,7 +790,7 @@
               </div>
             </div>
             </div>
-            <div class="ui horizontal divider">ต่อ</div>
+            <div class="ui dividing header"></div>
             <p>แสดงความคิดเห็นต่อผลการดำเนินการการเรียนการสอนระดับปริญญาตรี <br /></be>(รายละเอียดหลักสูตรตามเอกสาร <a href="">คลิกที่นี่</a> เพื่อดาวน์โหลดเอกสาร)</p>
             <table class="ui basic table">
             	<tbody>
@@ -803,7 +806,7 @@
             			<td colspan="3">
                       หลักสูตรเทคโนโลยีสารสนเทศ
                   </td>
-            			<td colspan="3">
+            			<td colspan="3" class="cs">
                       หลักสูตรวิทยาการคอมพิวเตอร์
                   </td>
             		</tr>
@@ -811,9 +814,9 @@
             			<td>ควรปรับปรุง</td>
             			<td>ดี</td>
             			<td>ดีมาก</td>
-            			<td>ควรปรับปรุง</td>
-            			<td>ดี</td>
-            			<td>ดีมาก</td>
+            			<td class="cs">ควรปรับปรุง</td>
+            			<td class="cs">ดี</td>
+            			<td class="cs">ดีมาก</td>
             		</tr>
             		<tr>
             			<td class="content">เนื้อหาของหลักสูตรจัดได้อย่างเหมาะสม รายวิชาบังคับของหลักสูตรที่ต้องปูพื้นฐานด้านเทคโนโลยีสารสนเทศและสร้างความเชื่อมโยงระหว่างภาคทฤษฎีและปฏิบัติ มีปฏิบัติการ แบบฝึกหัด โครงงาน และกรณีศึกษาให้นักศึกษาเข้าใจการประยุกต์องค์ความรู้กับปัญหาจริง </td>
@@ -832,17 +835,17 @@
                       <input type="radio" name="1it" value="3">
                     </div>
                   </td>
-            			<td>
-                    <div class="ui radio checkbox">
+            			<td class="cs">
+                    <div class="ui radio checkbox ">
                       <input type="radio" name="1cs" value="1">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="1cs" value="2">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="1cs" value="3">
                     </div>
@@ -865,17 +868,17 @@
                       <input type="radio" name="2it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="2cs" value="1">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="2cs" value="2">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="2cs" value="3">
                     </div>
@@ -898,17 +901,17 @@
                       <input type="radio" name="3it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="3cs" value="1">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="3cs" value="2">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="3cs" value="3">
                     </div>
@@ -931,17 +934,17 @@
                       <input type="radio" name="4it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="4cs" value="1">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="4cs" value="2">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="4cs" value="3">
                     </div>
@@ -964,17 +967,17 @@
                       <input type="radio" name="5it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="5cs" value="1">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="5cs" value="2">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="5cs" value="3">
                     </div>
@@ -997,17 +1000,17 @@
                       <input type="radio" name="6it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="6cs" value="1">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="6cs" value="2">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="6cs" value="3">
                     </div>
@@ -1030,17 +1033,17 @@
                       <input type="radio" name="7it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="7cs" value="1">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="7cs" value="2">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="7cs" value="3">
                     </div>
@@ -1063,17 +1066,17 @@
                       <input type="radio" name="8it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="8cs" value="1">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="8cs" value="2">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="8cs" value="3">
                     </div>
@@ -1096,17 +1099,17 @@
                       <input type="radio" name="9it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="9cs" value="1">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="9cs" value="2">
                     </div>
                   </td>
-            			<td>
+            			<td class="cs">
                     <div class="ui radio checkbox">
                       <input type="radio" name="9cs" value="3">
                     </div>
@@ -1114,13 +1117,13 @@
             		</tr>
             	</tbody>
             </table>
-            <div class="ui horizontal divider">ต่อ</div>
+            <div class="ui dividing header"></div>
             <table class="ui basic table">
             	<tbody>
             		<tr>
             			<td>ข้อเสนอแนะเพิ่มเติม</td>
             			<td>หลักสูตรเทคโนโลยีสารสนเทศ</td>
-            			<td>หลักสูตรวิทยาการคอมพิวเตอร์</td>
+            			<td class="cs">หลักสูตรวิทยาการคอมพิวเตอร์</td>
             		</tr>
             		<tr>
             			<td rowspan="3">จุดแข็ง</td>
@@ -1134,7 +1137,7 @@
                         </div>
                     </div>
                   </td>
-                  <td class="content">
+                  <td class="content cs">
                     <div class="three fields">
                         <div class="two wide field">
                           <span style="margin-top:2%;">1.</span>
@@ -1156,7 +1159,7 @@
                         </div>
                     </div>
                   </td>
-            			<td class="content">
+            			<td class="content cs">
                     <div class="three fields">
                         <div class="two wide field">
                           <span style="margin-top:2%;">2.</span>
@@ -1178,7 +1181,7 @@
                         </div>
                     </div>
                   </td>
-            			<td class="content">
+            			<td class="content cs">
                     <div class="three fields">
                         <div class="two wide field">
                           <span style="margin-top:2%;">3.</span>
@@ -1201,7 +1204,7 @@
                         </div>
                     </div>
                   </td>
-                  <td class="content">
+                  <td class="content cs">
                     <div class="three fields">
                         <div class="two wide field">
                           <span style="margin-top:2%;">1.</span>
@@ -1223,7 +1226,7 @@
                         </div>
                     </div>
                   </td>
-            			<td class="content">
+            			<td class="content cs">
                     <div class="three fields">
                         <div class="two wide field">
                           <span style="margin-top:2%;">2.</span>
@@ -1245,7 +1248,7 @@
                         </div>
                     </div>
                   </td>
-            			<td class="content">
+            			<td class="content cs">
                     <div class="three fields">
                         <div class="two wide field">
                           <span style="margin-top:2%;">3.</span>
@@ -1268,7 +1271,7 @@
                         </div>
                     </div>
                   </td>
-                  <td class="content">
+                  <td class="content cs">
                     <div class="three fields">
                         <div class="two wide field">
                           <span style="margin-top:2%;">1.</span>
@@ -1290,7 +1293,7 @@
                         </div>
                     </div>
                   </td>
-            			<td class="content">
+            			<td class="content cs">
                     <div class="three fields">
                         <div class="two wide field">
                           <span style="margin-top:2%;">2.</span>
@@ -1312,7 +1315,7 @@
                         </div>
                     </div>
                   </td>
-            			<td class="content">
+            			<td class="content cs">
                     <div class="three fields">
                         <div class="two wide field">
                           <span style="margin-top:2%;">3.</span>
@@ -1335,7 +1338,7 @@
                         </div>
                     </div>
                   </td>
-                  <td class="content">
+                  <td class="content cs">
                     <div class="three fields">
                         <div class="two wide field">
                           <span style="margin-top:2%;">1.</span>
@@ -1357,7 +1360,7 @@
                         </div>
                     </div>
                   </td>
-            			<td class="content">
+            			<td class="content cs">
                     <div class="three fields">
                         <div class="two wide field">
                           <span style="margin-top:2%;">2.</span>
@@ -1379,7 +1382,7 @@
                         </div>
                     </div>
                   </td>
-            			<td class="content">
+            			<td class="content cs">
                     <div class="three fields">
                         <div class="two wide field">
                           <span style="margin-top:2%;">3.</span>
@@ -1716,6 +1719,10 @@
       });
   });
 
-
+  $("#start").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#questionnaire").offset().top
+    }, 1000);
+  });
   </script>
 </html>
