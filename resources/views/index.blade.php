@@ -172,7 +172,7 @@
       max-height: 40em;
     }
     .ui.basic.table tr.highlight {
-    background-color: rgba(220, 220, 220, 0.2);
+    background-color: rgba(220, 220, 220, 0.3);
     }
 
   </style>
