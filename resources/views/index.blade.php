@@ -165,7 +165,13 @@
     .ui.selection.dropdown.want {
       min-width: 4em; !important;
     }
-    .ui.basic.table td.cs {
+    .ui.selection.dropdown.reason {
+      min-width: 4em; !important;
+    }
+    .ui.selection.dropdown .menu{
+      max-height: 40em;
+    }
+    .ui.basic.table tr.highlight {
     background-color: rgba(220, 220, 220, 0.2);
     }
 
@@ -217,57 +223,57 @@
           {{ Form::open(array('url' => '/form','class'=>'ui form')) }}
             <p>ข้อมูลทั่วไปเกี่ยวกับบริษัท</p>
             <div class="one fields">
-              <div class="sixteen wide field">
+              <div class="sixteen wide field" data-tooltip="กรอกชื่อบริษัท" data-position="top left">
                 <label>บริษัท</label>
-                <input placeholder="กรอกชื่อบริษัท" name="company" type="text">
+                <input name="company" type="text">
               </div>
             </div>
             <div class="five fields">
-              <div class="three wide field">
+              <div class="three wide field" data-tooltip="กรอกเลขที่ตั้งของบริษัทของท่าน" data-position="top left">
                 <label>เลขที่ตั้ง</label>
-                <input placeholder="กรอกเลขที่ตั้ง" name="number" type="text">
+                <input name="number" type="text">
               </div>
-              <div class="two wide field">
+              <div class="two wide field" data-tooltip="กรอกหมู่ที่ของบริษัทของท่าน" data-position="top left">
                 <label>หมู่ที่</label>
-                <input placeholder="กรอกหมู่ที่" name="village" type="text">
+                <input name="village" type="text">
               </div>
-              <div class="five wide field">
+              <div class="five wide field" data-tooltip="กรอกชื่ออาคาร หรือ ตึกของบริษัทของท่าน" data-position="top left">
                 <label>อาคาร</label>
-                <input placeholder="กรอกอาคาร" name="building" type="text">
+                <input name="building" type="text">
               </div>
-              <div class="two wide field">
+              <div class="two wide field" data-tooltip="กรอกชั้นที่อาคารของบริษัทของท่าน ถ้าอยู่ชั้นที่ 1 ให้กรอก 1 ไม่มีไม่ต้องกรอก" data-position="top left">
                 <label>ชั้นที่</label>
-                <input placeholder="กรอกชั้นที่" name="floor" type="number">
+                <input name="floor" type="number">
               </div>
-              <div class="four wide field">
+              <div class="four wide field" data-tooltip="กรอกชื่อถนนที่ตั้งของบริษัทท่าน" data-position="top left">
                 <label>ถนน</label>
-                <input placeholder="กรอกถนน" name="road" type="text">
+                <input name="road" type="text">
               </div>
             </div>
             <div class="four fields">
-              <div class="four wide field">
+              <div class="four wide field" data-tooltip="กรอกชื่อแขวงที่ตั้งของบริษัทท่าน" data-position="top left">
                 <label>แขวง</label>
-                <input placeholder="กรอกแขวง" name="subarea" type="text">
+                <input name="subarea" type="text">
               </div>
-              <div class="four wide field">
+              <div class="four wide field" data-tooltip="กรอกชื่อเขตที่ตั้งของบริษัทท่าน" data-position="top left">
                 <label>เขต</label>
-                <input placeholder="กรอกเขต" name="area" type="text">
+                <input name="area" type="text">
               </div>
-              <div class="four wide field">
+              <div class="four wide field"  data-tooltip="กรอกชื่อจังหวัดที่ตั้งของบริษัทท่าน" data-position="top left">
                 <label>จังหวัด</label>
-                <input placeholder="กรอกจังหวัด" name="province" type="text">
+                <input name="province" type="text">
               </div>
-              <div class="four wide field">
+              <div class="four wide field"  data-tooltip="กรอกรหัสไปรษณีย์ เช่น 10140" data-position="top left">
                 <label>รหัสไปรษณีย์</label>
-                <input placeholder="กรอกรหัสไปรษณีย์" name="zip" type="number">
+                <input name="zip" type="number">
               </div>
             </div>
             <div class="two fields">
-              <div class="eight wide field">
+              <div class="eight wide field" data-tooltip="กรอกเบอร์โทรศัพท์ของท่านโดยไม่ต้องใส่ขีด เช่น 024709889" data-position="top left">
                 <label>เบอร์โทรศัพท์</label>
                 <input placeholder="กรอกเบอร์โทรศัพท์" name="tel" type="text">
               </div>
-              <div class="eight wide field">
+              <div class="eight wide field" data-tooltip="กรอกอีเมล์ของท่าน" data-position="top left">
                 <label>E-mail</label>
                 <input placeholder="กรอกอีเมล์" name="email" type="email">
               </div>
@@ -275,7 +281,7 @@
             <div class="ui dividing header"></div>
             <p>ข้อมูลทั่วไปเกี่ยวกับผู้กรอก</p>
             <div class="three fields">
-              <div class="four wide field">
+              <div class="four wide field"  data-tooltip="เลือกคำนำหน้าชื่อ" data-position="top left">
                 <label>คำนำหน้าชื่อ</label>
                 <select class="ui dropdown" name="title">
                   <option value="">เลือกคำนำหน้าชื่อ</option>
@@ -284,21 +290,21 @@
                   <option value="mrs">นาง</option>
                 </select>
               </div>
-              <div class="six wide field">
+              <div class="six wide field" data-tooltip="กรอกชื่อจริงของท่าน" data-position="top left">
                 <label>ชื่อ</label>
-                <input placeholder="ชื่อจริง" name="name" type="text">
+                <input name="name" type="text">
               </div>
-              <div class="six wide field">
+              <div class="six wide field" data-tooltip="กรอกนามสกุลจริงของท่าน" data-position="top left">
                 <label>นามสกุล</label>
-                <input placeholder="นามสกุลจริง" name="surname" type="text">
+                <input name="surname" type="text">
               </div>
             </div>
-            <div class="two fields">
+            <div class="two fields" data-tooltip="กรอก แผนก/ฝ่าย/กอง ของท่าน" data-position="top left">
               <div class="field">
                 <label>แผนก/ฝ่าย/กอง</label>
                 <input name="section" type="text">
               </div>
-              <div class="field">
+              <div class="field" data-tooltip="กรอกตำแหน่งงานของท่าน" data-position="top left">
                 <label>ตำแหน่งงาน</label>
                 <input type="text" name="position">
               </div>
@@ -312,7 +318,7 @@
               <div class="four wide field">
                 <label>หลักสูตรเทคโนโลยีสารสนเทศ</label>
               </div>
-              <div class="four wide field">
+              <div class="four wide field" data-tooltip="ถ้าในบริษัทท่านมีอยู่ 3 คน ให้กรอก 3" data-position="top left">
                 <input placeholder="จำนวน" name="bscit" type="text">
               </div>
               <div class="four wide field">
@@ -323,10 +329,10 @@
               <div class="four wide field">
                 <label></label>
               </div>
-              <div class="four wide field">
+              <div class="four wide field" >
                 <label>หลักสูตรวิทยาการคอมพิวเตอร์</label>
               </div>
-              <div class="four wide field">
+              <div class="four wide field" data-tooltip="ถ้าในบริษัทท่านมีอยู่ 3 คน ให้กรอก 3" data-position="top left">
                 <input placeholder="จำนวน" name="bsccs" type="text">
               </div>
               <div class="four wide field">
@@ -340,7 +346,7 @@
               <div class="four wide field">
                 <label>หลักสูตรเทคโนโลยีสารสนเทศ</label>
               </div>
-              <div class="four wide field">
+              <div class="four wide field" data-tooltip="ถ้าในบริษัทท่านมีอยู่ 3 คน ให้กรอก 3" data-position="top left">
                 <input placeholder="จำนวน" name="mscit" type="text">
               </div>
               <div class="four wide field">
@@ -354,7 +360,7 @@
               <div class="four wide field">
                 <label>หลักสูตรวิทยาการคอมพิวเตอร์</label>
               </div>
-              <div class="four wide field">
+              <div class="four wide field" data-tooltip="ถ้าในบริษัทท่านมีอยู่ 3 คน ให้กรอก 3" data-position="top left">
                 <input placeholder="จำนวน" name="msccs" type="text">
               </div>
               <div class="four wide field">
@@ -368,7 +374,7 @@
               <div class="four wide field">
                 <label>หลักสูตรวิศวกรรมซอฟต์แวร์</label>
               </div>
-              <div class="four wide field">
+              <div class="four wide field" data-tooltip="ถ้าในบริษัทท่านมีอยู่ 3 คน ให้กรอก 3" data-position="top left">
                 <input placeholder="จำนวน" name="mscse" type="text">
               </div>
               <div class="four wide field">
@@ -382,7 +388,7 @@
               <div class="four wide field">
                 <label>หลักสูตรระบบสารสนเทศทางธุรกิจ</label>
               </div>
-              <div class="four wide field">
+              <div class="four wide field" data-tooltip="ถ้าในบริษัทท่านมีอยู่ 3 คน ให้กรอก 3" data-position="top left">
                 <input placeholder="จำนวน" name="mscbis" type="text">
               </div>
               <div class="four wide field">
@@ -390,14 +396,23 @@
               </div>
             </div>
             <div class="ui dividing header"></div>
-            <p>เหตุผลสำคัญที่ท่านรับบัณฑิตที่จบจากคณะเทคโนโลยีสารสนเทศ มจธ. เข้าทำงานคือข้อใด</p>
+            <div class="reason-list">
+            <p>เหตุผลสำคัญที่ท่านรับบัณฑิตที่จบจากคณะเทคโนโลยีสารสนเทศ มจธ. เข้าทำงานคือข้อใด <b>กรุณาใส่เลขเรียงลำดับ 1 - 5 (1 คือเน้นมากที่สุด)</b></p>
             <div class="two fields">
               <div class="eight wide field">
                 <div class="inline field">
-                  <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="reason1">
-                    <label>1. ชื่อเสียงของคณะเทคโนโลยีสารสนเทศ มจธ. </label>
-                  </div>
+                  <!-- <div class="ui checkbox"> -->
+                    <select class="ui dropdown reason" name="reason1">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <!-- <input type="checkbox" tabindex="0" class="hidden" name="reason1"> -->
+                    <label style="font-size:18px; font-weight: normal;">1. ชื่อเสียงของคณะเทคโนโลยีสารสนเทศ มจธ. </label>
+                  <!-- </div> -->
                 </div>
               </div>
               <div class="eight wide field">
@@ -411,95 +426,175 @@
             <div class="two fields">
               <div class="eight wide field">
                 <div class="inline field">
-                  <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="reason2">
-                    <label>2. ผลการศึกษา (เกรดเฉลี่ย) ที่จบเป็นที่พอใจ </label>
-                  </div>
+                  <!-- <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="reason2"> -->
+                    <select class="ui dropdown reason" name="reason2">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;">2. ผลการศึกษา (เกรดเฉลี่ย) ที่จบเป็นที่พอใจ </label>
+                  <!-- </div> -->
                 </div>
               </div>
               <div class="eight wide field">
                 <div class="inline field">
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="reason71">
-                    <label style="font-size:18px;">การติดต่อสื่อสาร </label>
-                  </div>
+                  <!-- <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="reason71"> -->
+                    <select class="ui dropdown reason" name="reason71">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;"> การติดต่อสื่อสาร </label>
+                  <!-- </div> -->
                 </div>
               </div>
             </div>
             <div class="two fields">
               <div class="eight wide field">
                 <div class="inline field">
-                  <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="reason3">
-                    <label>3. ผลคะแนนการสอบเข้าทำงาน </label>
-                  </div>
+                  <!-- <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="reason3"> -->
+                    <select class="ui dropdown reason" name="reason3">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;"> 3. ผลคะแนนการสอบเข้าทำงาน </label>
+                  <!-- </div> -->
                 </div>
               </div>
               <div class="eight wide field">
                 <div class="inline field">
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="reason72">
-                    <label style="font-size:18px;">มองโลกในแง่ดี </label>
-                  </div>
+                  <!-- <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="reason72"> -->
+                    <select class="ui dropdown reason" name="reason72">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;"> มองโลกในแง่ดี </label>
+                  <!-- </div> -->
                 </div>
               </div>
             </div>
             <div class="two fields">
               <div class="eight wide field">
                 <div class="inline field">
-                  <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="reason4">
-                    <label>4. Certificate </label>
-                  </div>
+                  <!-- <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="reason4"> -->
+                    <select class="ui dropdown reason" name="reason71">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;"> 4. Certificate </label>
+                  <!-- </div> -->
                 </div>
               </div>
               <div class="eight wide field">
                 <div class="inline field">
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="reason73">
-                    <label style="font-size:18px;">การทำงานร่วมกับผู้อื่น</label>
-                  </div>
+                  <!-- <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="reason73"> -->
+                    <select class="ui dropdown reason" name="reason73">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;"> การทำงานร่วมกับผู้อื่น</label>
+                  <!-- </div> -->
                 </div>
               </div>
             </div>
             <div class="two fields">
               <div class="eight wide field">
                 <div class="inline field">
-                  <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="reason5">
-                    <label>5. ภาษาอังกฤษ </label>
-                  </div>
+                  <!-- <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="reason5"> -->
+                    <select class="ui dropdown reason" name="reason5">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;"> 5. ภาษาอังกฤษ </label>
+                  <!-- </div> -->
                 </div>
               </div>
               <div class="eight wide field">
                 <div class="inline field">
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="reason74">
-                    <label style="font-size:18px;">การมีสัมมาคารวะ / รู้จักกาลเทศะ </label>
-                  </div>
+                  <!-- <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="reason74"> -->
+                    <select class="ui dropdown reason" name="reason74">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;"> การมีสัมมาคารวะ / รู้จักกาลเทศะ </label>
+                  <!-- </div> -->
                 </div>
               </div>
             </div>
             <div class="two fields">
               <div class="eight wide field">
                 <div class="inline field">
-                  <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="reason6">
-                    <label>6. ความรู้ความสามารถตรงกับความต้องการ </label>
-                  </div>
+                  <!-- <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="reason6"> -->
+                    <select class="ui dropdown reason" name="reason6">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;"> 6. ความรู้ความสามารถตรงกับความต้องการ </label>
+                  <!-- </div> -->
                 </div>
               </div>
               <div class="eight wide field">
                 <div class="inline field">
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="reason75">
-                    <label style="font-size:18px;">บุคลิกภาพดี</label>
-                  </div>
+                  <!-- <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="reason75"> -->
+                    <select class="ui dropdown reason" name="reason75">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;"> บุคลิกภาพดี</label>
+                  <!-- </div> -->
                 </div>
               </div>
             </div>
@@ -510,38 +605,57 @@
                   </div>
                 </div>
               </div>
-              <div class="five wide field">
+              <div class="six wide field">
                 <div class="inline field">
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="reason76">
-                    <label style="font-size:18px;">มีลักษณะของการเป็นผู้นำอื่นๆ โปรดระบุ </label>
+                  <!-- <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="reason76"> -->
+                    <select class="ui dropdown reason" name="reason76">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;"> มีลักษณะของการเป็นผู้นำอื่นๆ โปรดระบุ </label>
+                  <!-- </div> -->
+                </div>
+              </div>
+              <div class="two wide field">
+                <input placeholder="ระบุ" type="text" name="reason76add">
+              </div>
+            </div>
+            <div class="three fields">
+              <div class="eight wide field">
+                <div class="inline field">
+                  <div class="">
                   </div>
                 </div>
               </div>
               <div class="three wide field">
-                <input placeholder="ระบุ" type="text" name="reason76add">
-              </div>
-            </div>
-            <div class="two fields">
-              <div class="eight wide field">
                 <div class="inline field">
                   <div class="">
+                    <select class="ui dropdown reason" name="reason8">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;"> 8. อื่นๆ </label>
                   </div>
                 </div>
               </div>
-              <div class="eight wide field">
-                <div class="inline field">
-                  <div class="">
-                    <label style="font-size:18px;">8. อื่นๆ </label>
-                    <input placeholder="ระบุ" type="text" name="reason8">
-                  </div>
-                </div>
+              <div class="five wide field">
+                <input placeholder="ระบุ" type="text" name="reason8add">
               </div>
             </div>
+          </div>
             <div class="ui dividing header"></div>
             <div class="want-list">
-              <p>เพื่อให้บัณฑิตเป็นที่ต้องการของตลาดแรงงานมากขึ้น ท่านคิดว่าทางคณะเทคโนโลยีสารสนเทศควรเน้นเนื้อหาวิชาการหรือทักษะด้านใดเพิ่มเติมบ้าง กรุณาใส่เลขเรียงลำดับ 1 - 5 (1 คือเน้นมากที่สุด)</p>
+              <p>เพื่อให้บัณฑิตเป็นที่ต้องการของตลาดแรงงานมากขึ้น ท่านคิดว่าทางคณะเทคโนโลยีสารสนเทศควรเน้นเนื้อหาวิชาการหรือทักษะด้านใดเพิ่มเติมบ้าง <b>เรียงลำดับ 1-12 (1 คือเน้นมากที่สุด)</b></p>
               <div class="two fields">
                 <div class="three fields">
                     <div class="two wide field">
@@ -552,6 +666,13 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
                       </select>
                       <!-- <input placeholder="" name="want1" type="number" class="autohide"> -->
                     </div>
@@ -575,6 +696,13 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
                         </select>
                       </div>
                       <div class="ten wide field">
@@ -595,6 +723,13 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
                       </select>
                       <!-- <input placeholder="" name="want2" type="number" class="autohide"> -->
                     </div>
@@ -615,6 +750,13 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
                         </select>
                       </div>
                       <div class="ten wide field">
@@ -635,6 +777,13 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
                       </select>
                       <!-- <input placeholder="" name="want3" type="number" class="autohide"> -->
                     </div>
@@ -657,6 +806,13 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
                         </select>
                         <!-- <input placeholder="" name="want9" type="number" class="autohide"> -->
                       </div>
@@ -678,6 +834,13 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
                       </select>
                       <!-- <input placeholder="" name="want4" type="number" class="autohide"> -->
                     </div>
@@ -697,6 +860,13 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
                         </select>
                         <!-- <input placeholder="" name="want10" type="number" class="autohide"> -->
                       </div>
@@ -718,6 +888,13 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
                       </select>
                       <!-- <input placeholder="" name="want5" type="number" class="autohide"> -->
                     </div>
@@ -737,6 +914,13 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
                         </select>
                         <!-- <input placeholder="" name="want11" type="number" class="autohide"> -->
                       </div>
@@ -758,6 +942,13 @@
                       <option value="3">3</option>
                       <option value="4">4</option>
                       <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
                     </select>
                     <!-- <input placeholder="" name="want6" type="number" class="autohide"> -->
                   </div>
@@ -777,6 +968,13 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
                       </select>
                       <!-- <input placeholder="" name="want12" type="number" class="autohide"> -->
                     </div>
@@ -793,7 +991,7 @@
             </div>
             </div>
             <div class="ui dividing header"></div>
-            <p>แสดงความคิดเห็นต่อผลการดำเนินการการเรียนการสอนระดับปริญญาตรี <br /></be>(รายละเอียดหลักสูตรตามเอกสาร <a href="">คลิกที่นี่</a> เพื่อดาวน์โหลดเอกสาร)</p>
+            <p>แสดงความคิดเห็นต่อผลการดำเนินการการเรียนการสอนระดับปริญญาตรี <br /></be>(รายละเอียดหลักสูตรตามเอกสาร <a target="_blank" href="{{ URL::asset('/doc/ตารางแสดงรายละเอียดของหลักสูตรITและหลักสูตรCS.pdf') }}">คลิกที่นี่</a> เพื่อดาวน์โหลดเอกสาร)</p>
             <table class="ui basic table">
             	<tbody>
             		<tr>
@@ -806,50 +1004,50 @@
             		</tr>
             		<tr>
             			<td colspan="3">
-                      หลักสูตรเทคโนโลยีสารสนเทศ
+                      <b>หลักสูตรเทคโนโลยีสารสนเทศ</b>
                   </td>
             			<td colspan="3" class="cs">
-                      หลักสูตรวิทยาการคอมพิวเตอร์
+                      <b>หลักสูตรวิทยาการคอมพิวเตอร์</b>
                   </td>
             		</tr>
             		<tr>
             			<td>ควรปรับปรุง</td>
             			<td>ดี</td>
             			<td>ดีมาก</td>
-            			<td class="cs">ควรปรับปรุง</td>
-            			<td class="cs">ดี</td>
-            			<td class="cs">ดีมาก</td>
+            			<td>ควรปรับปรุง</td>
+            			<td>ดี</td>
+            			<td>ดีมาก</td>
             		</tr>
-            		<tr>
+            		<tr class="highlight">
             			<td class="content">เนื้อหาของหลักสูตรจัดได้อย่างเหมาะสม รายวิชาบังคับของหลักสูตรที่ต้องปูพื้นฐานด้านเทคโนโลยีสารสนเทศและสร้างความเชื่อมโยงระหว่างภาคทฤษฎีและปฏิบัติ มีปฏิบัติการ แบบฝึกหัด โครงงาน และกรณีศึกษาให้นักศึกษาเข้าใจการประยุกต์องค์ความรู้กับปัญหาจริง </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="1it" value="1">
+                      <input type="radio" name="r1it" value="1">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="1it" value="2">
+                      <input type="radio" name="r1it" value="2">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="1it" value="3">
+                      <input type="radio" name="r1it" value="3">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox ">
-                      <input type="radio" name="1cs" value="1">
+                      <input type="radio" name="r1cs" value="1">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="1cs" value="2">
+                      <input type="radio" name="r1cs" value="2">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="1cs" value="3">
+                      <input type="radio" name="r1cs" value="3">
                     </div>
                   </td>
             		</tr>
@@ -857,65 +1055,65 @@
             			<td class="content">นักศึกษามีคุณธรรม จริยธรรม ถ่อมตนและทำหน้าที่เป็นพลเมืองดี รับผิดชอบต่อตนเอง</td>
                   <td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="2it" value="1">
+                      <input type="radio" name="r2it" value="1">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="2it" value="2">
+                      <input type="radio" name="r2it" value="2">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="2it" value="3">
+                      <input type="radio" name="r2it" value="3">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="2cs" value="1">
+                      <input type="radio" name="r2cs" value="1">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="2cs" value="2">
+                      <input type="radio" name="r2cs" value="2">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="2cs" value="3">
+                      <input type="radio" name="r2cs" value="3">
                     </div>
                   </td>
             		</tr>
-            		<tr>
+            		<tr class="highlight">
             			<td class="content">นักศึกษามีความรู้พื้นฐานด้านเทคโนโลยีสารสนเทศทั้งภาคทฤษฎีและภาคปฎิบัติอยู่ในเกณฑ์ดี สามารถประยุกต์ได้อย่างเหมาะสมในการประกอบวิชาชีพ </td>
                   <td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="3it" value="1">
+                      <input type="radio" name="r3it" value="1">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="3it" value="2">
+                      <input type="radio" name="r3it" value="2">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="3it" value="3">
+                      <input type="radio" name="r3it" value="3">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="3cs" value="1">
+                      <input type="radio" name="r3cs" value="1">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="3cs" value="2">
+                      <input type="radio" name="r3cs" value="2">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="3cs" value="3">
+                      <input type="radio" name="r3cs" value="3">
                     </div>
                   </td>
             		</tr>
@@ -923,65 +1121,65 @@
             			<td class="content">นักศึกษามีความรู้ทันสมัย ใฝ่รู้ และมีความสามารถพัฒนาความรู้ เพื่อพัฒนาตนเองในด้านเฉพาะที่สนใจ </td>
                   <td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="4it" value="1">
+                      <input type="radio" name="r4it" value="1">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="4it" value="2">
+                      <input type="radio" name="r4it" value="2">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="4it" value="3">
+                      <input type="radio" name="r4it" value="3">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="4cs" value="1">
+                      <input type="radio" name="r4cs" value="1">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="4cs" value="2">
+                      <input type="radio" name="r4cs" value="2">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="4cs" value="3">
+                      <input type="radio" name="r4cs" value="3">
                     </div>
                   </td>
             		</tr>
-            		<tr>
+            		<tr class="highlight">
             			<td class="content">นักศึกษาคิดเป็น ทำเป็น และเลือกวิธีการแก้ปัญหาได้อย่างเป็นระบบและเหมาะสม</td>
                   <td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="5it" value="1">
+                      <input type="radio" name="r5it" value="1">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="5it" value="2">
+                      <input type="radio" name="r5it" value="2">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="5it" value="3">
+                      <input type="radio" name="r5it" value="3">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="5cs" value="1">
+                      <input type="radio" name="r5cs" value="1">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="5cs" value="2">
+                      <input type="radio" name="r5cs" value="2">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="5cs" value="3">
+                      <input type="radio" name="r5cs" value="3">
                     </div>
                   </td>
             		</tr>
@@ -989,65 +1187,65 @@
             			<td class="content">นักศึกษามีความสามารถทำงานร่วมกับผู้อื่น มีทักษะการบริหารจัดการและทำงานเป็นหมู่คณะ</td>
                   <td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="6it" value="1">
+                      <input type="radio" name="r6it" value="1">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="6it" value="2">
+                      <input type="radio" name="r6it" value="2">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="6it" value="3">
+                      <input type="radio" name="r6it" value="3">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="6cs" value="1">
+                      <input type="radio" name="r6cs" value="1">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="6cs" value="2">
+                      <input type="radio" name="r6cs" value="2">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="6cs" value="3">
+                      <input type="radio" name="r6cs" value="3">
                     </div>
                   </td>
             		</tr>
-            		<tr>
+            		<tr class="highlight">
             			<td class="content">นักศึกษารู้จักแสวงหาความรู้ด้วยตนเองและสามารถติดต่อสื่อสารกับผู้อื่นได้เป็นอย่างดี</td>
                   <td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="7it" value="1">
+                      <input type="radio" name="r7it" value="1">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="7it" value="2">
+                      <input type="radio" name="r7it" value="2">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="7it" value="3">
+                      <input type="radio" name="r7it" value="3">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="7cs" value="1">
+                      <input type="radio" name="r7cs" value="1">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="7cs" value="2">
+                      <input type="radio" name="r7cs" value="2">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="7cs" value="3">
+                      <input type="radio" name="r7cs" value="3">
                     </div>
                   </td>
             		</tr>
@@ -1055,65 +1253,65 @@
             			<td class="content">นักศึกษามีความสามารถในการใช้ภาษาไทยและภาษาต่างประเทศในการสื่อสารและใช้เทคโนโลยีได้ดี</td>
                   <td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="8it" value="1">
+                      <input type="radio" name="r8it" value="1">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="8it" value="2">
+                      <input type="radio" name="r8it" value="2">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="8it" value="3">
+                      <input type="radio" name="r8it" value="3">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="8cs" value="1">
+                      <input type="radio" name="r8cs" value="1">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="8cs" value="2">
+                      <input type="radio" name="r8cs" value="2">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="8cs" value="3">
+                      <input type="radio" name="r8cs" value="3">
                     </div>
                   </td>
             		</tr>
-            		<tr>
+            		<tr class="highlight">
             			<td class="content">นักศึกษามีความสามารถวิเคราะห์ ออกแบบ พัฒนา ติดตั้ง และปรับปรุงระบบคอมพิวเตอร์ให้ตรงตามข้อกำหนด</td>
                   <td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="9it" value="1">
+                      <input type="radio" name="r9it" value="1">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="9it" value="2">
+                      <input type="radio" name="r9it" value="2">
                     </div>
                   </td>
             			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="9it" value="3">
+                      <input type="radio" name="r9it" value="3">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="9cs" value="1">
+                      <input type="radio" name="r9cs" value="1">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="9cs" value="2">
+                      <input type="radio" name="r9cs" value="2">
                     </div>
                   </td>
-            			<td class="cs">
+            			<td>
                     <div class="ui radio checkbox">
-                      <input type="radio" name="9cs" value="3">
+                      <input type="radio" name="r9cs" value="3">
                     </div>
                   </td>
             		</tr>
@@ -1125,7 +1323,7 @@
             		<tr>
             			<td>ข้อเสนอแนะเพิ่มเติม</td>
             			<td>หลักสูตรเทคโนโลยีสารสนเทศ</td>
-            			<td class="cs">หลักสูตรวิทยาการคอมพิวเตอร์</td>
+            			<td>หลักสูตรวิทยาการคอมพิวเตอร์</td>
             		</tr>
             		<tr>
             			<td rowspan="3">จุดแข็ง</td>
@@ -1134,8 +1332,8 @@
                         <div class="two wide field">
                           <span style="margin-top:2%;">1.</span>
                         </div>
-                        <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="s1it" type="text">
+                        <div class="fourteen wide field" data-tooltip="ให้ระบุข้อเสนอแนะเพิ่มเติม หากไม่มีไม่ต้องกรอก" data-position="top left">
+                          <input name="s1it" type="text">
                         </div>
                     </div>
                   </td>
@@ -1144,8 +1342,8 @@
                         <div class="two wide field">
                           <span style="margin-top:2%;">1.</span>
                         </div>
-                        <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="s1cs" type="text">
+                        <div class="fourteen wide field" data-tooltip="ให้ระบุข้อเสนอแนะเพิ่มเติม หากไม่มีไม่ต้องกรอก" data-position="top left">
+                          <input name="s1cs" type="text">
                         </div>
                     </div>
                   </td>
@@ -1157,7 +1355,7 @@
                           <span style="margin-top:2%;">2.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="s2it" type="text">
+                          <input name="s2it" type="text">
                         </div>
                     </div>
                   </td>
@@ -1167,7 +1365,7 @@
                           <span style="margin-top:2%;">2.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="s2cs" type="text">
+                          <input name="s2cs" type="text">
                         </div>
                     </div>
                   </td>
@@ -1179,7 +1377,7 @@
                           <span style="margin-top:2%;">3.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="s3it" type="text">
+                          <input name="s3it" type="text">
                         </div>
                     </div>
                   </td>
@@ -1189,7 +1387,7 @@
                           <span style="margin-top:2%;">3.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="s3cs" type="text">
+                          <input name="s3cs" type="text">
                         </div>
                     </div>
                   </td>
@@ -1201,8 +1399,8 @@
                         <div class="two wide field">
                           <span style="margin-top:2%;">1.</span>
                         </div>
-                        <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="w1it" type="text">
+                        <div class="fourteen wide field" data-tooltip="ให้ระบุข้อเสนอแนะเพิ่มเติม หากไม่มีไม่ต้องกรอก" data-position="top left">
+                          <input name="w1it" type="text">
                         </div>
                     </div>
                   </td>
@@ -1211,8 +1409,8 @@
                         <div class="two wide field">
                           <span style="margin-top:2%;">1.</span>
                         </div>
-                        <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="w1cs" type="text">
+                        <div class="fourteen wide field" data-tooltip="ให้ระบุข้อเสนอแนะเพิ่มเติม หากไม่มีไม่ต้องกรอก" data-position="top left">
+                          <input name="w1cs" type="text">
                         </div>
                     </div>
                   </td>
@@ -1224,7 +1422,7 @@
                           <span style="margin-top:2%;">2.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="w2it" type="text">
+                          <input name="w2it" type="text">
                         </div>
                     </div>
                   </td>
@@ -1234,7 +1432,7 @@
                           <span style="margin-top:2%;">2.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="w2cs" type="text">
+                          <input name="w2cs" type="text">
                         </div>
                     </div>
                   </td>
@@ -1246,7 +1444,7 @@
                           <span style="margin-top:2%;">3.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="w3it" type="text">
+                          <input name="w3it" type="text">
                         </div>
                     </div>
                   </td>
@@ -1256,7 +1454,7 @@
                           <span style="margin-top:2%;">3.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="w3cs" type="text">
+                          <input name="w3cs" type="text">
                         </div>
                     </div>
                   </td>
@@ -1268,8 +1466,8 @@
                         <div class="two wide field">
                           <span style="margin-top:2%;">1.</span>
                         </div>
-                        <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="im1it" type="text">
+                        <div class="fourteen wide field" data-tooltip="ให้ระบุข้อเสนอแนะเพิ่มเติม หากไม่มีไม่ต้องกรอก" data-position="top left">
+                          <input name="im1it" type="text">
                         </div>
                     </div>
                   </td>
@@ -1278,8 +1476,8 @@
                         <div class="two wide field">
                           <span style="margin-top:2%;">1.</span>
                         </div>
-                        <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="im1cs" type="text">
+                        <div class="fourteen wide field" data-tooltip="ให้ระบุข้อเสนอแนะเพิ่มเติม หากไม่มีไม่ต้องกรอก" data-position="top left">
+                          <input name="im1cs" type="text">
                         </div>
                     </div>
                   </td>
@@ -1291,7 +1489,7 @@
                           <span style="margin-top:2%;">2.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="im2it" type="text">
+                          <input name="im2it" type="text">
                         </div>
                     </div>
                   </td>
@@ -1301,7 +1499,7 @@
                           <span style="margin-top:2%;">2.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="im2cs" type="text">
+                          <input name="im2cs" type="text">
                         </div>
                     </div>
                   </td>
@@ -1313,7 +1511,7 @@
                           <span style="margin-top:2%;">3.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="im3it" type="text">
+                          <input name="im3it" type="text">
                         </div>
                     </div>
                   </td>
@@ -1323,7 +1521,7 @@
                           <span style="margin-top:2%;">3.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="im3cs" type="text">
+                          <input name="im3cs" type="text">
                         </div>
                     </div>
                   </td>
@@ -1335,8 +1533,8 @@
                         <div class="two wide field">
                           <span style="margin-top:2%;">1.</span>
                         </div>
-                        <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="su1it" type="text">
+                        <div class="fourteen wide field" data-tooltip="ให้ระบุข้อเสนอแนะเพิ่มเติม หากไม่มีไม่ต้องกรอก" data-position="top left">
+                          <input name="su1it" type="text">
                         </div>
                     </div>
                   </td>
@@ -1345,8 +1543,8 @@
                         <div class="two wide field">
                           <span style="margin-top:2%;">1.</span>
                         </div>
-                        <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="su1cs" type="text">
+                        <div class="fourteen wide field" data-tooltip="ให้ระบุข้อเสนอแนะเพิ่มเติม หากไม่มีไม่ต้องกรอก" data-position="top left">
+                          <input name="su1cs" type="text">
                         </div>
                     </div>
                   </td>
@@ -1358,7 +1556,7 @@
                           <span style="margin-top:2%;">2.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="su2it" type="text">
+                          <input name="su2it" type="text">
                         </div>
                     </div>
                   </td>
@@ -1368,7 +1566,7 @@
                           <span style="margin-top:2%;">2.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="su2cs" type="text">
+                          <input name="su2cs" type="text">
                         </div>
                     </div>
                   </td>
@@ -1379,8 +1577,8 @@
                         <div class="two wide field">
                           <span style="margin-top:2%;">3.</span>
                         </div>
-                        <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="su3it" type="text">
+                        <div class="fourteen wide field" data-tooltip="ให้ระบุข้อเสนอแนะเพิ่มเติม หากไม่มีไม่ต้องกรอก" data-position="top left">
+                          <input name="su3it" type="text">
                         </div>
                     </div>
                   </td>
@@ -1390,7 +1588,7 @@
                           <span style="margin-top:2%;">3.</span>
                         </div>
                         <div class="fourteen wide field">
-                          <input placeholder="ระบุ" name="su3cs" type="text">
+                          <input name="su3cs" type="text">
                         </div>
                     </div>
                   </td>
@@ -1409,18 +1607,21 @@
     <div class="ui inverted vertical footer segment">
       <div class="ui container">
         <div class="ui stackable inverted divided equal height stackable grid">
-          <div class="thirteen wide column">
+          <div class="twelve wide column">
             <img src="img/logo.png" class="image" width="20%">
             <h4>School of Information Technology, <br />
                 King Mongkut's University of Technology Thonburi<br />
                 126 Pracha Uthit Rd., Bang Mod, Thung Khru, Bangkok, Thailand 10140</h4>
             <h5>โทร. 0-2470-9889</h5>
           </div>
-          <div class="three wide column"><br />
+          <div class="four wide column"><br />
             <h4 class="ui inverted header">Develop by </h4>
-            <h4 class="">Kunchai Sodhom </h4>
-            <h4 class="">Aphiphit Thammarcheep </h4>
-            <h4 class="">Worachat Arunothaikrit</h4>
+            <h4 class="">
+            <a href="https://www.facebook.com/trrekiiz" style="color:#fff" target="_blank">Kunchai Sodhom </a><br />
+            <a href="https://www.facebook.com/taro.aphiphit" style="color:#fff" target="_blank">Aphiphit Thammarcheep</a><br />
+            <a href="https://www.facebook.com/worachat.arunothaikrit" style="color:#fff" target="_blank">Worachat Arunothaikrit</a></h4>
+            <h5>หากมีปัญหาในการกรอกแบบสอบถามโปรดติดต่อ น.ส. รุ่งโรจน์  ขวัญโกมล <br /><a href="mailto:rungroj@sit.kmutt.ac.th" style="color:#fff">E-mail : rungroj@sit.kmutt.ac.th</a></h5>
+
           </div>
         </div>
       </div>
@@ -1566,115 +1767,7 @@
           }
         ]
       },
-      //section4
-      // want1: {
-      //   identifier: 'want1',
-      //   rules: [
-      //     {
-      //       type   : 'integer[1..5]',
-      //       prompt : 'กรุณาใส่เลข 1 - 5 '
-      //     }
-      //   ]
-      // },
-      // want2: {
-      //   identifier: 'want2',
-      //   rules: [
-      //     {
-      //       type   : 'integer[1..5]',
-      //       prompt : 'กรุณาใส่เลข 1 - 5 '
-      //     }
-      //   ]
-      // },
-      // want3: {
-      //   identifier: 'want3',
-      //   rules: [
-      //     {
-      //       type   : 'integer[1..5]',
-      //       prompt : 'กรุณาใส่เลข 1 - 5 '
-      //     }
-      //   ]
-      // },
-      // want4: {
-      //   identifier: 'want4',
-      //   rules: [
-      //     {
-      //       type   : 'integer[1..5]',
-      //       prompt : 'กรุณาใส่เลข 1 - 5 '
-      //     }
-      //   ]
-      // },
-      // want5: {
-      //   identifier: 'want5',
-      //   rules: [
-      //     {
-      //       type   : 'integer[1..5]',
-      //       prompt : 'กรุณาใส่เลข 1 - 5 '
-      //     }
-      //   ]
-      // },
-      // want6: {
-      //   identifier: 'want6',
-      //   rules: [
-      //     {
-      //       type   : 'integer[1..5]',
-      //       prompt : 'กรุณาใส่เลข 1 - 5 '
-      //     }
-      //   ]
-      // },
-      // want7: {
-      //   identifier: 'want7',
-      //   rules: [
-      //     {
-      //       type   : 'integer[1..5]',
-      //       prompt : 'กรุณาใส่เลข 1 - 5 '
-      //     }
-      //   ]
-      // },
-      // want8: {
-      //   identifier: 'want8',
-      //   rules: [
-      //     {
-      //       type   : 'integer[1..5]',
-      //       prompt : 'กรุณาใส่เลข 1 - 5 '
-      //     }
-      //   ]
-      // },
-      // want9: {
-      //   identifier: 'want9',
-      //   rules: [
-      //     {
-      //       type   : 'integer[1..5]',
-      //       prompt : 'กรุณาใส่เลข 1 - 5 '
-      //     }
-      //   ]
-      // },
-      // want10: {
-      //   identifier: 'want10',
-      //   rules: [
-      //     {
-      //       type   : 'integer[1..5]',
-      //       prompt : 'กรุณาใส่เลข 1 - 5 '
-      //     }
-      //   ]
-      // },
-      // want11: {
-      //   identifier: 'want11',
-      //   rules: [
-      //     {
-      //       type   : 'integer[1..5]',
-      //       prompt : 'กรุณาใส่เลข 1 - 5 '
-      //     }
-      //   ]
-      // },
-      // want12: {
-      //   identifier: 'want12',
-      //   rules: [
-      //     {
-      //       type   : 'integer[1..5]',
-      //       prompt : 'กรุณาใส่เลข 1 - 5 '
-      //     }
-      //   ]
-      // },
+
       want1add: {
         identifier : 'want1add',
         depends    : 'want1',
@@ -1704,6 +1797,168 @@
             prompt : 'กรุณาระบุอื่นๆ ด้วย'
           }
         ]
+      },
+      r1it: {
+        identifier: 'r1it',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ เนื้อหาของหลักสูตรจัดได้อย่างเหมาะสม รายวิชาบังคับของหลักสูตรที่ต้องปูพื้นฐานด้านเทคโนโลยีสารสนเทศและสร้างความเชื่อมโยงระหว่างภาคทฤษฎีและปฏิบัติ มีปฏิบัติการ แบบฝึกหัด โครงงาน และกรณีศึกษาให้นักศึกษาเข้าใจการประยุกต์องค์ความรู้กับปัญหาจริง ในส่วนของหลักสูตรเทคโนโลยีสารสนเทศ'
+          }
+        ]
+      },
+      r2it: {
+        identifier: 'r2it',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษามีคุณธรรม จริยธรรม ถ่อมตนและทำหน้าที่เป็นพลเมืองดี รับผิดชอบต่อตนเอง ในส่วนของหลักสูตรเทคโนโลยีสารสนเทศ'
+          }
+        ]
+      },
+      r3it: {
+        identifier: 'r3it',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษามีความรู้พื้นฐานด้านเทคโนโลยีสารสนเทศทั้งภาคทฤษฎีและภาคปฎิบัติอยู่ในเกณฑ์ดี สามารถประยุกต์ได้อย่างเหมาะสมในการประกอบวิชาชีพ ในส่วนของหลักสูตรเทคโนโลยีสารสนเทศ'
+          }
+        ]
+      },
+      r4it: {
+        identifier: 'r4it',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษามีความรู้ทันสมัย ใฝ่รู้ และมีความสามารถพัฒนาความรู้ เพื่อพัฒนาตนเองในด้านเฉพาะที่สนใจ ในส่วนของหลักสูตรเทคโนโลยีสารสนเทศ'
+          }
+        ]
+      },
+      r5it: {
+        identifier: 'r5it',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษาคิดเป็น ทำเป็น และเลือกวิธีการแก้ปัญหาได้อย่างเป็นระบบและเหมาะสม ในส่วนของหลักสูตรเทคโนโลยีสารสนเทศ'
+          }
+        ]
+      },
+      r6it: {
+        identifier: 'r6it',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษามีความสามารถทำงานร่วมกับผู้อื่น มีทักษะการบริหารจัดการและทำงานเป็นหมู่คณะ ในส่วนของหลักสูตรเทคโนโลยีสารสนเทศ'
+          }
+        ]
+      },
+      r7it: {
+        identifier: 'r7it',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษารู้จักแสวงหาความรู้ด้วยตนเองและสามารถติดต่อสื่อสารกับผู้อื่นได้เป็นอย่างดี ในส่วนของหลักสูตรเทคโนโลยีสารสนเทศ'
+          }
+        ]
+      },
+      r8it: {
+        identifier: 'r8it',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษามีความสามารถในการใช้ภาษาไทยและภาษาต่างประเทศในการสื่อสารและใช้เทคโนโลยีได้ดี ในส่วนของหลักสูตรเทคโนโลยีสารสนเทศ'
+          }
+        ]
+      },
+      r9it: {
+        identifier: 'r9it',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษามีความสามารถวิเคราะห์ ออกแบบ พัฒนา ติดตั้ง และปรับปรุงระบบคอมพิวเตอร์ให้ตรงตามข้อกำหนด ในส่วนของหลักสูตรเทคโนโลยีสารสนเทศ'
+          }
+        ]
+      },
+      r1cs: {
+        identifier: 'r1cs',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ เนื้อหาของหลักสูตรจัดได้อย่างเหมาะสม รายวิชาบังคับของหลักสูตรที่ต้องปูพื้นฐานด้านเทคโนโลยีสารสนเทศและสร้างความเชื่อมโยงระหว่างภาคทฤษฎีและปฏิบัติ มีปฏิบัติการ แบบฝึกหัด โครงงาน และกรณีศึกษาให้นักศึกษาเข้าใจการประยุกต์องค์ความรู้กับปัญหาจริง ในส่วนของหลักสูตรวิทยาการคอมพิวเตอร์'
+          }
+        ]
+      },
+      r2cs: {
+        identifier: 'r2cs',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษามีคุณธรรม จริยธรรม ถ่อมตนและทำหน้าที่เป็นพลเมืองดี รับผิดชอบต่อตนเอง ในส่วนของหลักสูตรวิทยาการคอมพิวเตอร์'
+          }
+        ]
+      },
+      r3cs: {
+        identifier: 'r3cs',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษามีความรู้พื้นฐานด้านเทคโนโลยีสารสนเทศทั้งภาคทฤษฎีและภาคปฎิบัติอยู่ในเกณฑ์ดี สามารถประยุกต์ได้อย่างเหมาะสมในการประกอบวิชาชีพ ในส่วนของหลักสูตรวิทยาการคอมพิวเตอร์'
+          }
+        ]
+      },
+      r4cs: {
+        identifier: 'r4cs',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษามีความรู้ทันสมัย ใฝ่รู้ และมีความสามารถพัฒนาความรู้ เพื่อพัฒนาตนเองในด้านเฉพาะที่สนใจ ในส่วนของหลักสูตรวิทยาการคอมพิวเตอร์'
+          }
+        ]
+      },
+      r5cs: {
+        identifier: 'r5cs',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษาคิดเป็น ทำเป็น และเลือกวิธีการแก้ปัญหาได้อย่างเป็นระบบและเหมาะสม ในส่วนของหลักสูตรวิทยาการคอมพิวเตอร์'
+          }
+        ]
+      },
+      r6cs: {
+        identifier: 'r6cs',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษามีความสามารถทำงานร่วมกับผู้อื่น มีทักษะการบริหารจัดการและทำงานเป็นหมู่คณะ ในส่วนของหลักสูตรวิทยาการคอมพิวเตอร์'
+          }
+        ]
+      },
+      r7cs: {
+        identifier: 'r7cs',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษารู้จักแสวงหาความรู้ด้วยตนเองและสามารถติดต่อสื่อสารกับผู้อื่นได้เป็นอย่างดี ในส่วนของหลักสูตรวิทยาการคอมพิวเตอร์'
+          }
+        ]
+      },
+      r8cs: {
+        identifier: 'r8cs',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษามีความสามารถในการใช้ภาษาไทยและภาษาต่างประเทศในการสื่อสารและใช้เทคโนโลยีได้ดี ในส่วนของหลักสูตรวิทยาการคอมพิวเตอร์'
+          }
+        ]
+      },
+      r9cs: {
+        identifier: 'r9cs',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'กรุณาเลือกข้อ นักศึกษามีความสามารถวิเคราะห์ ออกแบบ พัฒนา ติดตั้ง และปรับปรุงระบบคอมพิวเตอร์ให้ตรงตามข้อกำหนด ในส่วนของหลักสูตรวิทยาการคอมพิวเตอร์'
+          }
+        ]
       }
     }
   });
@@ -1721,10 +1976,24 @@
       });
   });
 
+  $('.reason-list select').on("change",function(){
+      console.log($(this).val());
+      var selector = [];
+      $('.reason-list select').map(function(a,b){
+        $('.reason-list select option[value="'+b.value+'"]').map(function(key,value){
+            $(this).prop('disabled', true);
+            $('.reason-list .menu').find('.item[data-value="'+b.value+'"]').addClass('disabled');
+        });
+      });
+  });
+
   $("#start").click(function() {
     $('html, body').animate({
         scrollTop: $("#questionnaire").offset().top
     }, 1000);
   });
+
+
+
   </script>
 </html>
