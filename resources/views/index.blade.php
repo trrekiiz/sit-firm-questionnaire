@@ -655,7 +655,7 @@
           </div>
             <div class="ui dividing header"></div>
             <div class="want-list">
-              <p>เพื่อให้บัณฑิตเป็นที่ต้องการของตลาดแรงงานมากขึ้น ท่านคิดว่าทางคณะเทคโนโลยีสารสนเทศควรเน้นเนื้อหาวิชาการหรือทักษะด้านใดเพิ่มเติมบ้าง <b>เรียงลำดับ 1-12 (1 คือเน้นมากที่สุด)</b></p>
+              <p>เพื่อให้บัณฑิตเป็นที่ต้องการของตลาดแรงงานมากขึ้น ท่านคิดว่าทางคณะเทคโนโลยีสารสนเทศควรเน้นเนื้อหาวิชาการหรือทักษะด้านใดเพิ่มเติมบ้าง <b>เรียงลำดับ 1-5 (1 คือเน้นมากที่สุด)</b></p>
               <div class="two fields">
                 <div class="three fields">
                     <div class="two wide field">
@@ -666,13 +666,6 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
                       </select>
                       <!-- <input placeholder="" name="want1" type="number" class="autohide"> -->
                     </div>
@@ -696,13 +689,6 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                          <option value="11">11</option>
-                          <option value="12">12</option>
                         </select>
                       </div>
                       <div class="ten wide field">
@@ -723,13 +709,6 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
                       </select>
                       <!-- <input placeholder="" name="want2" type="number" class="autohide"> -->
                     </div>
@@ -750,13 +729,6 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                          <option value="11">11</option>
-                          <option value="12">12</option>
                         </select>
                       </div>
                       <div class="ten wide field">
@@ -777,13 +749,6 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
                       </select>
                       <!-- <input placeholder="" name="want3" type="number" class="autohide"> -->
                     </div>
@@ -806,13 +771,6 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                          <option value="11">11</option>
-                          <option value="12">12</option>
                         </select>
                         <!-- <input placeholder="" name="want9" type="number" class="autohide"> -->
                       </div>
@@ -834,13 +792,6 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
                       </select>
                       <!-- <input placeholder="" name="want4" type="number" class="autohide"> -->
                     </div>
@@ -860,13 +811,6 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                          <option value="11">11</option>
-                          <option value="12">12</option>
                         </select>
                         <!-- <input placeholder="" name="want10" type="number" class="autohide"> -->
                       </div>
@@ -888,13 +832,6 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
                       </select>
                       <!-- <input placeholder="" name="want5" type="number" class="autohide"> -->
                     </div>
@@ -914,13 +851,6 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                          <option value="11">11</option>
-                          <option value="12">12</option>
                         </select>
                         <!-- <input placeholder="" name="want11" type="number" class="autohide"> -->
                       </div>
@@ -942,13 +872,6 @@
                       <option value="3">3</option>
                       <option value="4">4</option>
                       <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
                     </select>
                     <!-- <input placeholder="" name="want6" type="number" class="autohide"> -->
                   </div>
@@ -968,13 +891,6 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
                       </select>
                       <!-- <input placeholder="" name="want12" type="number" class="autohide"> -->
                     </div>
