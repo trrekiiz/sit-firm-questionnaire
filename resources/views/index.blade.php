@@ -922,7 +922,7 @@
             			<td colspan="3">
                       <b>หลักสูตรเทคโนโลยีสารสนเทศ</b>
                   </td>
-            			<td colspan="3" class="cs">
+            			<td colspan="3" class="cs" style="border-left: 1px solid rgba(34,36,38,.1);">
                       <b>หลักสูตรวิทยาการคอมพิวเตอร์</b>
                   </td>
             		</tr>
@@ -930,7 +930,7 @@
             			<td>ควรปรับปรุง</td>
             			<td>ดี</td>
             			<td>ดีมาก</td>
-            			<td>ควรปรับปรุง</td>
+            			<td style="border-left: 1px solid rgba(34,36,38,.1);">ควรปรับปรุง</td>
             			<td>ดี</td>
             			<td>ดีมาก</td>
             		</tr>
@@ -951,8 +951,8 @@
                       <input type="radio" name="r1it" value="3">
                     </div>
                   </td>
-            			<td>
-                    <div class="ui radio checkbox ">
+            			<td style="border-left: 1px solid rgba(34,36,38,.1);">
+                    <div class="ui radio checkbox">
                       <input type="radio" name="r1cs" value="1">
                     </div>
                   </td>
@@ -984,7 +984,7 @@
                       <input type="radio" name="r2it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td style="border-left: 1px solid rgba(34,36,38,.1);">
                     <div class="ui radio checkbox">
                       <input type="radio" name="r2cs" value="1">
                     </div>
@@ -1017,7 +1017,7 @@
                       <input type="radio" name="r3it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td style="border-left: 1px solid rgba(34,36,38,.1);">
                     <div class="ui radio checkbox">
                       <input type="radio" name="r3cs" value="1">
                     </div>
@@ -1050,7 +1050,7 @@
                       <input type="radio" name="r4it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td style="border-left: 1px solid rgba(34,36,38,.1);">
                     <div class="ui radio checkbox">
                       <input type="radio" name="r4cs" value="1">
                     </div>
@@ -1083,7 +1083,7 @@
                       <input type="radio" name="r5it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td style="border-left: 1px solid rgba(34,36,38,.1);">
                     <div class="ui radio checkbox">
                       <input type="radio" name="r5cs" value="1">
                     </div>
@@ -1116,7 +1116,7 @@
                       <input type="radio" name="r6it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td style="border-left: 1px solid rgba(34,36,38,.1);">
                     <div class="ui radio checkbox">
                       <input type="radio" name="r6cs" value="1">
                     </div>
@@ -1149,7 +1149,7 @@
                       <input type="radio" name="r7it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td style="border-left: 1px solid rgba(34,36,38,.1);">
                     <div class="ui radio checkbox">
                       <input type="radio" name="r7cs" value="1">
                     </div>
@@ -1182,7 +1182,7 @@
                       <input type="radio" name="r8it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td style="border-left: 1px solid rgba(34,36,38,.1);">
                     <div class="ui radio checkbox">
                       <input type="radio" name="r8cs" value="1">
                     </div>
@@ -1215,7 +1215,7 @@
                       <input type="radio" name="r9it" value="3">
                     </div>
                   </td>
-            			<td>
+            			<td style="border-left: 1px solid rgba(34,36,38,.1);">
                     <div class="ui radio checkbox">
                       <input type="radio" name="r9cs" value="1">
                     </div>
