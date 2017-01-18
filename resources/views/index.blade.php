@@ -418,7 +418,7 @@
               <div class="eight wide field">
                 <div class="inline field">
                   <div>
-                    <label style="font-size:18px;">7. ทักษะทางด้าน Soft Skill </label>
+                    <label style="font-size:18px;">9. ทักษะทางด้าน Soft Skill </label>
                   </div>
                 </div>
               </div>
@@ -445,7 +445,7 @@
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <!-- <div class="ui checkbox">
                     <input type="checkbox" tabindex="0" class="hidden" name="reason71"> -->
-                    <select class="ui dropdown reason" name="reason71">
+                    <select class="ui dropdown reason" name="reason91">
                       <option value="">-</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -480,7 +480,7 @@
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <!-- <div class="ui checkbox">
                     <input type="checkbox" tabindex="0" class="hidden" name="reason72"> -->
-                    <select class="ui dropdown reason" name="reason72">
+                    <select class="ui dropdown reason" name="reason92">
                       <option value="">-</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -498,7 +498,7 @@
                 <div class="inline field">
                   <!-- <div class="ui checkbox">
                     <input type="checkbox" tabindex="0" class="hidden" name="reason4"> -->
-                    <select class="ui dropdown reason" name="reason71">
+                    <select class="ui dropdown reason" name="reason4">
                       <option value="">-</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -515,7 +515,7 @@
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <!-- <div class="ui checkbox">
                     <input type="checkbox" tabindex="0" class="hidden" name="reason73"> -->
-                    <select class="ui dropdown reason" name="reason73">
+                    <select class="ui dropdown reason" name="reason93">
                       <option value="">-</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -541,7 +541,7 @@
                       <option value="4">4</option>
                       <option value="5">5</option>
                     </select>
-                    <label style="font-size:18px; font-weight: normal;"> 5. ภาษาอังกฤษ </label>
+                    <label style="font-size:18px; font-weight: normal;"> 5. มีทักษะทางด้านการสื่อสารทั้งภาษาไทยและภาษาอังกฤษ </label>
                   <!-- </div> -->
                 </div>
               </div>
@@ -550,7 +550,7 @@
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <!-- <div class="ui checkbox">
                     <input type="checkbox" tabindex="0" class="hidden" name="reason74"> -->
-                    <select class="ui dropdown reason" name="reason74">
+                    <select class="ui dropdown reason" name="reason94">
                       <option value="">-</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -585,7 +585,7 @@
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <!-- <div class="ui checkbox">
                     <input type="checkbox" tabindex="0" class="hidden" name="reason75"> -->
-                    <select class="ui dropdown reason" name="reason75">
+                    <select class="ui dropdown reason" name="reason95">
                       <option value="">-</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -601,8 +601,47 @@
             <div class="three fields">
               <div class="eight wide field">
                 <div class="inline field">
-                  <div class="">
-                  </div>
+                  <select class="ui dropdown reason" name="reason7">
+                    <option value="">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <label style="font-size:18px; font-weight: normal;"> 7. มีทักษะการคิดวิเคราะห์ </label>
+                </div>
+              </div>
+              <div class="eight wide field">
+                <div class="inline field">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <!-- <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="reason76"> -->
+                    <select class="ui dropdown reason" name="reason96">
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label style="font-size:18px; font-weight: normal;"> มีทักษะการทำงานเป็นทีม </label>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="three fields">
+              <div class="eight wide field">
+                <div class="inline field">
+                  <select class="ui dropdown reason" name="reason8">
+                    <option value="">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <label style="font-size:18px; font-weight: normal;"> 8. มีคุณธรรมจริยธรรมและรับผิดชอบต่อสังคม </label>
                 </div>
               </div>
               <div class="six wide field">
@@ -610,7 +649,7 @@
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <!-- <div class="ui checkbox">
                     <input type="checkbox" tabindex="0" class="hidden" name="reason76"> -->
-                    <select class="ui dropdown reason" name="reason76">
+                    <select class="ui dropdown reason" name="reason97">
                       <option value="">-</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -623,20 +662,18 @@
                 </div>
               </div>
               <div class="two wide field">
-                <input placeholder="ระบุ" type="text" name="reason76add">
+                <input placeholder="ระบุ" type="text" name="reason97add">
               </div>
             </div>
             <div class="three fields">
               <div class="eight wide field">
                 <div class="inline field">
-                  <div class="">
-                  </div>
                 </div>
               </div>
               <div class="three wide field">
                 <div class="inline field">
                   <div class="">
-                    <select class="ui dropdown reason" name="reason8">
+                    <select class="ui dropdown reason" name="reason10">
                       <option value="">-</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -644,12 +681,12 @@
                       <option value="4">4</option>
                       <option value="5">5</option>
                     </select>
-                    <label style="font-size:18px; font-weight: normal;"> 8. อื่นๆ </label>
+                    <label style="font-size:18px; font-weight: normal;"> 10. อื่นๆ </label>
                   </div>
                 </div>
               </div>
               <div class="five wide field">
-                <input placeholder="ระบุ" type="text" name="reason8add">
+                <input placeholder="ระบุ" type="text" name="reason10add">
               </div>
             </div>
           </div>
