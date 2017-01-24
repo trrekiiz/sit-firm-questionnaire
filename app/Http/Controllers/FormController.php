@@ -15,6 +15,6 @@ class FormController extends Controller
   public function postForm(){
     $data = Input::all();
     $this->InsertRepository->insertForm($data);
-    return view('index');
+    return view('thanks');
   }
 }
