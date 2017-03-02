@@ -1923,7 +1923,7 @@
       var selector = [];
       $('.want-list select').map(function(a,b){
         $('.want-list select option[value="'+b.value+'"]').map(function(key,value){
-            $(this).prop('disabled', true);
+            // $(this).prop('disabled', true);
             $('.want-list .menu').find('.item[data-value="'+b.value+'"]').addClass('disabled');
         });
       });
@@ -1934,7 +1934,7 @@
       var selector = [];
       $('.reason-list select').map(function(a,b){
         $('.reason-list select option[value="'+b.value+'"]').map(function(key,value){
-            $(this).prop('disabled', true);
+            // $(this).prop('disabled', true);
             $('.reason-list .menu').find('.item[data-value="'+b.value+'"]').addClass('disabled');
         });
       });
@@ -1945,8 +1945,6 @@
         scrollTop: $("#questionnaire").offset().top
     }, 1000);
   });
-
-
 
   </script>
 </html>
