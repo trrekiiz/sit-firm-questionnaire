@@ -19,4 +19,5 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::post('/form', 'FormController@postForm');
+Route::post('/form','FormController@postForm');
+Route::get('dashboard','DashboardController@index');
