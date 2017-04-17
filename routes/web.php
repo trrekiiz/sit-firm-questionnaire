@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 Route::post('/form','FormController@postForm');
 Route::get('dashboard','DashboardController@index');
+Route::get('company','DashboardController@company');

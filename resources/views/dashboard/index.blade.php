@@ -197,6 +197,8 @@
                      <span style="color:#fff; font-family: 'Athiti';">บริษัท</span>
                   </div>
                </div>
+               <br><br>
+               <a href="/company"><div class="ui huge primary button" id="start">ดูรายละเอียดรายบริษัท <i class="right arrow icon"></i></div></a>
             </div>
          </div>
       </div>
