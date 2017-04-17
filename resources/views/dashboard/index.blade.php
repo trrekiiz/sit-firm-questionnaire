@@ -96,7 +96,7 @@
       font-weight: normal;
       }
       .ui.vertical.stripe {
-      padding: 8em 0em;
+      padding: 5em 0em;
       }
       .ui.vertical.stripe h3 {
       font-size: 2em;

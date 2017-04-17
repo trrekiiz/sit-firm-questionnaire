@@ -214,8 +214,15 @@ class DashboardController extends Controller
         $data = [
             'getall' => DB::table('questionnaire_answers')->get(),
             'countall' => DB::table('questionnaire_answers')->count()
-            
         ];
         return view('dashboard.company',compact('data'));
+    }
+    public function viewCompany($id){
+        $data = [
+            'getall' => DB::table('questionnaire_answers')->where('id',$id)->get(),
+            'countall' => DB::table('questionnaire_answers')->count()
+            
+        ];
+        return view('dashboard.list',compact('data'));
     }
 }
