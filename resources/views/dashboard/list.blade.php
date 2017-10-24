@@ -192,7 +192,7 @@
                </h3>
                
                <br><br>
-               <a href="/company"><div class="ui huge primary button" id="start">กลับสู่หน้ารวมบริษัท <i class="left arrow icon"></i></div></a>
+               <a href="/company"><div class="ui huge primary button" id="start">กลับสู่หน้ารวมบริษัททั้งหมด <i class="left arrow icon"></i></div></a>
             </div>
          </div>
       </div>
